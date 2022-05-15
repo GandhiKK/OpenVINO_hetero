@@ -184,7 +184,7 @@ def run_pose_estimation(exec_net, source=0, flip=False, use_popup=False, skip_fi
 
 
 # директория, куда загружены модели
-base_model_dir = "smert\\diploma\\model"
+base_model_dir = "OpenVINO\\smert\\diploma\\model"
 # название модели
 model_name = "human-pose-estimation-0001"
 # выбранная точность (FP32, FP16, FP16-INT8)
@@ -244,4 +244,4 @@ video_file = "https://github.com/intel-iot-devkit/sample-videos/blob/master/stor
 run_pose_estimation(exec_net, video_file, flip=False, use_popup=True, skip_first_frames=500)
 
 # обработка видео с веб-камеры
-# run_pose_estimation(source=0, flip=True, use_popup=True)
+# run_pose_estimation(exec_net, source=0, flip=True, use_popup=True)
