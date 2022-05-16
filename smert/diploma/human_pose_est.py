@@ -8,7 +8,6 @@ import numpy as np
 from IPython import display
 from numpy.lib.stride_tricks import as_strided
 from openvino import inference_engine as ie
-from zmq import device
 
 from decoder_pose import OpenPoseDecoder
 import player as utils
@@ -184,7 +183,7 @@ def run_pose_estimation(exec_net, source=0, flip=False, use_popup=False, skip_fi
 
 
 # директория, куда загружены модели
-base_model_dir = "OpenVINO\\smert\\diploma\\model"
+base_model_dir = "smert\\diploma\\model"
 # название модели
 model_name = "human-pose-estimation-0001"
 # выбранная точность (FP32, FP16, FP16-INT8)
@@ -238,10 +237,11 @@ height, width = exec_net.input_info[input_key].tensor_desc.dims[2:]
 decoder = OpenPoseDecoder()            
             
 # файл для обработки        
-video_file = "https://github.com/intel-iot-devkit/sample-videos/blob/master/store-aisle-detection.mp4?raw=true"
+# video_file = "https://github.com/intel-iot-devkit/sample-videos/blob/master/store-aisle-detection.mp4?raw=true"
+video_file = 'https://github.com/GandhiKK/OpenVINO_hetero/blob/master/smert/diploma/data/gym-detection4x.mp4?raw=true'
 
 # обработка видео файла
 run_pose_estimation(exec_net, video_file, flip=False, use_popup=True, skip_first_frames=500)
 
 # обработка видео с веб-камеры
-# run_pose_estimation(exec_net, source=0, flip=True, use_popup=True)
+# run_pose_estimation(source=0, flip=True, use_popup=True)
