@@ -69,6 +69,13 @@
 
 ---
 
-## Пример использования
+## Использование
+
+### Пример метрик
+
+[Метрики](smert/diploma/metrics/metrics_def.txt)
+
+### Видео
 
 https://user-images.githubusercontent.com/42946613/168580222-dbfd962d-e160-40b3-8284-2b7dcb044351.mp4
+
