@@ -8,11 +8,12 @@ import numpy as np
 from IPython import display
 from numpy.lib.stride_tricks import as_strided
 from openvino import inference_engine as ie
+import ngraph as ng
 
 from decoder_pose import OpenPoseDecoder
 import player as utils
 
-device_dict = {0:'CPU', 1:'GPU', 2:'HETERO:CPU,GPU'}
+device_dict = {0:'CPU', 1:'GPU', 2:'HETERO'}
 cur_device = 0
 
 
@@ -57,9 +58,10 @@ def process_results(img, results):
 
     return poses, scores
 
-colors = ((255, 0, 0), (255, 0, 255), (170, 0, 255), (255, 0, 85), (255, 0, 170), (85, 255, 0),
-          (255, 170, 0), (0, 255, 0), (255, 255, 0), (0, 255, 85), (170, 255, 0), (0, 85, 255),
-          (0, 255, 170), (0, 0, 255), (0, 255, 255), (85, 0, 255), (0, 170, 255))
+
+colors = ((255, 0, 255), (255, 0, 255), (255, 0, 255), (255, 0, 255), (255, 0, 255), (255, 0, 255),
+          (255, 0, 255), (255, 0, 255), (255, 0, 255), (255, 0, 255), (255, 0, 255), (255, 0, 255),
+          (255, 0, 255), (255, 0, 255), (255, 0, 255), (255, 0, 255), (255, 0, 255))
 
 default_skeleton = ((15, 13), (13, 11), (16, 14), (14, 12), (11, 12), (5, 11), (6, 12), (5, 6), (5, 7),
                     (6, 8), (7, 9), (8, 10), (1, 2), (0, 1), (0, 2), (1, 3), (2, 4), (3, 5), (4, 6))
@@ -128,19 +130,26 @@ def run_pose_estimation(exec_net, source=0, flip=False, use_popup=False, skip_fi
             frame = draw_poses(frame, poses, 0.1)
 
             processing_times.append(stop_time - start_time)
-            if len(processing_times) > 200:
+            if len(processing_times) > 50:
                 processing_times.popleft()
 
             _, f_width = frame.shape[:2]
+            
             # средняя время инференса
             processing_time = np.mean(processing_times) * 1000
+            metrics_latency[device_dict[cur_device]].append(processing_time)
+            
             # пропускная способность
             fps = 1000 / processing_time
+            metrics_FPS[device_dict[cur_device]].append(fps)
+            
             # вывод статистики
             cv2.putText(frame, f"Время инференса: {processing_time:.1f}мс ({fps:.1f} FPS)", (20, 40),
                         cv2.FONT_HERSHEY_COMPLEX, f_width / 1000, (0, 0, 255), 1, cv2.LINE_AA)
-            # вывод текущего устройства исполнения
-            cv2.putText(frame, f'{device_dict[cur_device]}', (520, 40),
+            
+            # вывод текущего устройства исполнения     
+            cv2.rectangle(frame, (900, 690), (1280, 620), (255,255,255), cv2.FILLED)        
+            cv2.putText(frame, f'{device_dict[cur_device]}', (910, 670),
                             cv2.FONT_HERSHEY_COMPLEX, f_width / 1000, (0, 0, 0), 1, cv2.LINE_AA)
 
 
@@ -148,7 +157,7 @@ def run_pose_estimation(exec_net, source=0, flip=False, use_popup=False, skip_fi
                 cv2.imshow(title, frame)
                 key = cv2.waitKey(1)
                 # ESC
-                if key == 27:
+                if key == 27:                  
                     break
                 # TAB
                 if key == 9:    
@@ -158,12 +167,7 @@ def run_pose_estimation(exec_net, source=0, flip=False, use_popup=False, skip_fi
                     if cur_device == 1:
                         exec_net = ie_core.load_network(net, "GPU")
                     if cur_device == 2:
-                        # cpu_config = {}
-                        # gpu_config = {}
-                        # ie_core.set_config(config=cpu_config, device_name="CPU")
-                        # ie_core.set_config(config=gpu_config, device_name="GPU")
-                        # exec_net = ie_core.load_network(net, "MULTI", config={"MULTI_DEVICE_PRIORITIES": "CPU,GPU"})     
-                        exec_net = ie_core.load_network(net, device_name="HETERO:CPU,GPU")              
+                        exec_net = ie_core.load_network(net, device_name="HETERO:GPU,CPU", num_requests=2)           
                         
             else:
                 _, encoded_img = cv2.imencode(".jpg", frame, params=[cv2.IMWRITE_JPEG_QUALITY, 90])
@@ -176,11 +180,23 @@ def run_pose_estimation(exec_net, source=0, flip=False, use_popup=False, skip_fi
         print(e)
     finally:
         if player is not None:
+            metrics.write('    MEAN                  MIN              MAX\n')
+            metrics.write('Latency:\n')
+            for i in metrics_latency:
+                metrics.write(f'  {i[:3]}: {str(np.round(np.median(np.array(metrics_latency[i])), 3))} ms     ')
+                metrics.write(f'    {str(np.round(np.min(np.array(metrics_latency[i])), 3))} ms \n')
+            metrics.write('FPS:\n')
+            for i in metrics_FPS:
+                metrics.write(f'  {i[:3]}: {str(np.round(np.median(np.array(metrics_FPS[i])), 3))}            ')
+                metrics.write(f'                 {str(np.round(np.max(np.array(metrics_FPS[i])), 3))}\n')
             player.stop()
         if use_popup:
+            metrics.close()
             cv2.destroyAllWindows()
 
-
+metrics_latency = {'CPU': [], 'GPU': [], 'HETERO': []}
+metrics_FPS = {'CPU': [], 'GPU': [], 'HETERO': []}
+metrics = open('smert\\diploma\\metrics\\metrics.txt', 'w')
 
 # директория, куда загружены модели
 base_model_dir = "smert\\diploma\\model"
@@ -215,29 +231,55 @@ net = ie_core.read_network(model=model_path, weights=model_weights_path)
 
 # exec_net = ie_core.load_network(net, device_name="MULTI:CPU,GPU") # 3
 
-exec_net = ie_core.load_network(net, "CPU") # 4.1
+# exec_net = ie_core.load_network(net, "CPU") # 4.1
 # exec_net = ie_core.load_network(net, "GPU") # 4.2
 
 # exec_net = ie_core.load_network(net, device_name="HETERO:GPU,CPU")
 # nq = exec_net.get_metric("OPTIMAL_NUMBER_OF_INFER_REQUESTS")
-# exec_net = ie_core.load_network(net, device_name="HETERO:GPU,CPU", num_requests=nq)
-# layers_map = ie_core.query_network(network=net, device_name="HETERO:GPU,CPU")
-# for layer in layers_map:
-#     print('{}: {}'.format(layer, layers_map[layer]))
+# print(nq)
 
+exec_net = ie_core.load_network(net, device_name="HETERO:CPU,GPU", num_requests=2)
+layers_map = ie_core.query_network(network=net, device_name="HETERO:CPU,GPU")
+cur_affinity = open('smert\\diploma\\metrics\\affinity.txt', 'w')
+new_affinity = open('smert\\diploma\\metrics\\aff.txt', 'w')
+for layer in layers_map:
+    cur_affinity.write(f'{layer}: {layers_map[layer]}\n')    
+cur_affinity.close()
+
+ng_func = ng.function_from_cnn(net)
+layers_map = ie_core.query_network(network=net, device_name="HETERO:CPU,GPU")
+# нахождение всех conv слоев
+conv_layers = []
+for layer in layers_map:
+    index = layer.find('conv')
+    if index != -1:
+        conv_layers.append(layer)
+# каждому conv -> GPU
+for i in conv_layers:
+    layers_map[i] = 'GPU'
+# связывание
+for node in ng_func.get_ordered_ops():
+    affinity = layers_map[node.get_friendly_name()]
+    node.get_rt_info()["affinity"] = affinity
+# новое affinity
+# ie_core.set_config(config={'HETERO_DUMP_GRAPH_DOT' : 'YES'}, device_name='HETERO')
+exec_net = ie_core.load_network(net, device_name="HETERO:CPU,GPU", num_requests=2)
+# layers_map = ie_core.query_network(network=net, device_name="HETERO:CPU,GPU")
+# for layer in layers_map:
+#     new_affinity.write(f'{layer}: {layers_map[layer]}\n')      
+# new_affinity.close()
 
 # названия входного и выходного слоев
 input_key = list(exec_net.input_info)[0]
 output_keys = list(exec_net.outputs.keys())
 
-# паарметры входного слоя
+# параметры входного слоя
 height, width = exec_net.input_info[input_key].tensor_desc.dims[2:]
 
 # декодер для поз
 decoder = OpenPoseDecoder()            
             
 # файл для обработки        
-# video_file = "https://github.com/intel-iot-devkit/sample-videos/blob/master/store-aisle-detection.mp4?raw=true"
 video_file = 'https://github.com/GandhiKK/OpenVINO_hetero/blob/master/smert/diploma/data/gym-detection4x.mp4?raw=true'
 
 # обработка видео файла

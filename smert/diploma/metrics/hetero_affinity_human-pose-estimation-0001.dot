@@ -1,0 +1,829 @@
+digraph ngraph
+{
+    Add_4014 [shape=box color=black label="Mconv7_stage2_L1\nAdd_4014\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Result_4015 [shape=box color=crimson penwidth=1.5 label="Mconv7_stage2_L1/sink_port_0\nResult_4015\nResult\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_4014 -> Result_4015
+    Convolution_4012 [shape=box color=black label="Mconv7_stage2_L1/WithoutBiases\nConvolution_4012\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_4012 -> Add_4014
+    CLONE_0[ shape="box"  style="dashed"  color="black"  label="Mconv7_stage2_L1/Dims5138\nConstant_4013\nConstant
+{f16}[1,38,1,1]
+value: [9.91225e-05, 0.000451803, -6.87242e-05, 7.08699e-05, -0.000152111, 0.000614643, 0.000182748...]" ]
+    CLONE_0 -> Add_4014
+    Relu_4010 [shape=box color=black label="Mrelu6_stage2_L1\nRelu_4010\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_4010 -> Convolution_4012
+    CLONE_1[ shape="box"  style="dashed"  color="black"  label="437\nConstant_4011\nConstant
+{f16}[38,128,1,1]
+value: [-0.000362873, 0.00430679, 0.000492096, 0.000609875, 0.00131416, 0.00126839, 0.00535965...]" ]
+    CLONE_1 -> Convolution_4012
+    Add_4009 [shape=box color=black label="Mconv6_stage2_L1\nAdd_4009\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_4009 -> Relu_4010
+    Convolution_4007 [shape=box color=black label="Mconv6_stage2_L1/WithoutBiases\nConvolution_4007\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_4007 -> Add_4009
+    CLONE_2[ shape="box"  style="dashed"  color="black"  label="Mconv6_stage2_L1/Dims5096\nConstant_4008\nConstant
+{f16}[1,128,1,1]
+value: [0.0672607, 0.0493164, -0.0276794, 0.0265045, -0.23938, 0.0613098, -0.0132904...]" ]
+    CLONE_2 -> Add_4009
+    Add_3996 [shape=box color=black label="Mconv5_stage2_L1/5x5/res\nAdd_3996\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3996 -> Convolution_4007
+    CLONE_3[ shape="box"  style="dashed"  color="black"  label="298\nConstant_4006\nConstant
+{f16}[128,128,1,1]
+value: [0.0252533, -0.0117874, 0.0153961, -0.0927734, 0.0650635, 0.0528259, 0.0129089...]" ]
+    CLONE_3 -> Convolution_4007
+    Relu_3985 [shape=box color=black label="relu/Mconv5_stage2_L1/sq\nRelu_3985\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3985 -> Add_3996
+    Relu_3995 [shape=box color=black label="relu/Mconv5_stage2_L1/3x3/2\nRelu_3995\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3995 -> Add_3996
+    Add_3994 [shape=box color=black label="Mconv5_stage2_L1/3x3/2/Fused_Add_\nAdd_3994\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3994 -> Relu_3995
+    Convolution_3992 [shape=box color=black label="Mconv5_stage2_L1/3x3/2/WithoutBiases\nConvolution_3992\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3992 -> Add_3994
+    CLONE_4[ shape="box"  style="dashed"  color="black"  label="data_add_88988903\nConstant_3993\nConstant
+{f16}[1,128,1,1]
+value: [1.60742, 0.123779, -0.176514, -0.0140152, -0.465576, 0.429443, 1.26367...]" ]
+    CLONE_4 -> Add_3994
+    Relu_3990 [shape=box color=black label="relu/Mconv5_stage2_L1/3x3\nRelu_3990\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3990 -> Convolution_3992
+    CLONE_5[ shape="box"  style="dashed"  color="black"  label="conv5/stage2/3x3/2/bn/mean/Fused_Mul__copy\nConstant_3991\nConstant
+{f16}[128,128,3,3]
+value: [0.00205421, 0.00105667, 0.0224152, 0.0226288, 0.0370789, -0.0147781, -0.0325623...]" ]
+    CLONE_5 -> Convolution_3992
+    Add_3989 [shape=box color=black label="Mconv5_stage2_L1/3x3/Fused_Add_\nAdd_3989\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3989 -> Relu_3990
+    Convolution_3987 [shape=box color=black label="Mconv5_stage2_L1/3x3/WithoutBiases\nConvolution_3987\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3987 -> Add_3989
+    CLONE_6[ shape="box"  style="dashed"  color="black"  label="data_add_88908895\nConstant_3988\nConstant
+{f16}[1,128,1,1]
+value: [-0.206787, -0.333984, 0.980469, -0.0804443, -0.232422, -0.291748, 0.47168...]" ]
+    CLONE_6 -> Add_3989
+    Relu_3985 -> Convolution_3987
+    CLONE_7[ shape="box"  style="dashed"  color="black"  label="conv5/stage2/3x3/bn/mean/Fused_Mul__copy\nConstant_3986\nConstant
+{f16}[128,128,3,3]
+value: [-0.111084, -0.035675, -0.065918, -0.0636597, 0.0359802, 0.0474548, -0.0308075...]" ]
+    CLONE_7 -> Convolution_3987
+    Add_3984 [shape=box color=black label="Mconv5_stage2_L1/sq\nAdd_3984\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3984 -> Relu_3985
+    Convolution_3982 [shape=box color=black label="Mconv5_stage2_L1/sq/WithoutBiases\nConvolution_3982\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3982 -> Add_3984
+    CLONE_8[ shape="box"  style="dashed"  color="black"  label="Mconv5_stage2_L1/sq/Dims5162\nConstant_3983\nConstant
+{f16}[1,128,1,1]
+value: [-0.118469, -0.0529785, -0.0800171, 0.122803, 0.0344849, -0.127808, 0.0916748...]" ]
+    CLONE_8 -> Add_3984
+    Add_3980 [shape=box color=black label="Mconv4_stage2_L1/5x5/res\nAdd_3980\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3980 -> Convolution_3982
+    CLONE_9[ shape="box"  style="dashed"  color="black"  label="264\nConstant_3981\nConstant
+{f16}[128,128,1,1]
+value: [0.0224915, -0.0613708, 0.164185, 0.0908813, 0.0318604, -0.0354004, -0.0907593...]" ]
+    CLONE_9 -> Convolution_3982
+    Relu_3969 [shape=box color=black label="relu/Mconv4_stage2_L1/sq\nRelu_3969\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3969 -> Add_3980
+    Relu_3979 [shape=box color=black label="relu/Mconv4_stage2_L1/3x3/2\nRelu_3979\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3979 -> Add_3980
+    Add_3978 [shape=box color=black label="Mconv4_stage2_L1/3x3/2/Fused_Add_\nAdd_3978\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3978 -> Relu_3979
+    Convolution_3976 [shape=box color=black label="Mconv4_stage2_L1/3x3/2/WithoutBiases\nConvolution_3976\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3976 -> Add_3978
+    CLONE_10[ shape="box"  style="dashed"  color="black"  label="data_add_88828887\nConstant_3977\nConstant
+{f16}[1,128,1,1]
+value: [0.402832, 0.67334, 0.646484, 0.623535, 0.183716, 0.896973, 0.870605...]" ]
+    CLONE_10 -> Add_3978
+    Relu_3974 [shape=box color=black label="relu/Mconv4_stage2_L1/3x3\nRelu_3974\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3974 -> Convolution_3976
+    CLONE_11[ shape="box"  style="dashed"  color="black"  label="conv4/stage2/3x3/2/bn/mean/Fused_Mul__copy\nConstant_3975\nConstant
+{f16}[128,128,3,3]
+value: [0.0613098, -0.0275269, -0.0771484, 0.0799561, -0.0333557, -0.0191193, -0.0157928...]" ]
+    CLONE_11 -> Convolution_3976
+    Add_3973 [shape=box color=black label="Mconv4_stage2_L1/3x3/Fused_Add_\nAdd_3973\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3973 -> Relu_3974
+    Convolution_3971 [shape=box color=black label="Mconv4_stage2_L1/3x3/WithoutBiases\nConvolution_3971\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3971 -> Add_3973
+    CLONE_12[ shape="box"  style="dashed"  color="black"  label="data_add_88748879\nConstant_3972\nConstant
+{f16}[1,128,1,1]
+value: [-0.30127, 0.535156, 0.221802, 0.456299, 1.7207, -1.30762, 1.16602...]" ]
+    CLONE_12 -> Add_3973
+    Relu_3969 -> Convolution_3971
+    CLONE_13[ shape="box"  style="dashed"  color="black"  label="conv4/stage2/3x3/bn/mean/Fused_Mul__copy\nConstant_3970\nConstant
+{f16}[128,128,3,3]
+value: [0.0753784, -0.0250092, -0.0144653, 0.0172577, -0.00246239, 0.00415039, 0.0148697...]" ]
+    CLONE_13 -> Convolution_3971
+    Add_3968 [shape=box color=black label="Mconv4_stage2_L1/sq\nAdd_3968\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3968 -> Relu_3969
+    Convolution_3966 [shape=box color=black label="Mconv4_stage2_L1/sq/WithoutBiases\nConvolution_3966\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3966 -> Add_3968
+    CLONE_14[ shape="box"  style="dashed"  color="black"  label="Mconv4_stage2_L1/sq/Dims5114\nConstant_3967\nConstant
+{f16}[1,128,1,1]
+value: [-0.0906982, -0.0321045, 0.287109, -0.144409, -0.0340576, -0.281982, -0.0658569...]" ]
+    CLONE_14 -> Add_3968
+    Add_3964 [shape=box color=black label="Mconv3_stage2_L1/5x5/res\nAdd_3964\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3964 -> Convolution_3966
+    CLONE_15[ shape="box"  style="dashed"  color="black"  label="216\nConstant_3965\nConstant
+{f16}[128,128,1,1]
+value: [-0.118713, -0.0761719, 0.30127, -0.0284882, -0.0168762, 0.132324, 0.0419006...]" ]
+    CLONE_15 -> Convolution_3966
+    Relu_3953 [shape=box color=black label="relu/Mconv3_stage2_L1/sq\nRelu_3953\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3953 -> Add_3964
+    Relu_3963 [shape=box color=black label="relu/Mconv3_stage2_L1/3x3/2\nRelu_3963\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3963 -> Add_3964
+    Add_3962 [shape=box color=black label="Mconv3_stage2_L1/3x3/2/Fused_Add_\nAdd_3962\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3962 -> Relu_3963
+    Convolution_3960 [shape=box color=black label="Mconv3_stage2_L1/3x3/2/WithoutBiases\nConvolution_3960\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3960 -> Add_3962
+    CLONE_16[ shape="box"  style="dashed"  color="black"  label="data_add_88668871\nConstant_3961\nConstant
+{f16}[1,128,1,1]
+value: [0.0382996, 0.052887, 0.283936, 0.729492, -0.552246, -0.154419, 0.540527...]" ]
+    CLONE_16 -> Add_3962
+    Relu_3958 [shape=box color=black label="relu/Mconv3_stage2_L1/3x3\nRelu_3958\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3958 -> Convolution_3960
+    CLONE_17[ shape="box"  style="dashed"  color="black"  label="conv3/stage2/3x3/2/bn/mean/Fused_Mul__copy\nConstant_3959\nConstant
+{f16}[128,128,3,3]
+value: [-0.0513306, -0.111023, -0.0543213, -0.0244141, -0.0647583, -0.0315857, -0.0298157...]" ]
+    CLONE_17 -> Convolution_3960
+    Add_3957 [shape=box color=black label="Mconv3_stage2_L1/3x3/Fused_Add_\nAdd_3957\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3957 -> Relu_3958
+    Convolution_3955 [shape=box color=black label="Mconv3_stage2_L1/3x3/WithoutBiases\nConvolution_3955\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3955 -> Add_3957
+    CLONE_18[ shape="box"  style="dashed"  color="black"  label="data_add_88588863\nConstant_3956\nConstant
+{f16}[1,128,1,1]
+value: [1.61523, -0.0269775, -0.577637, -0.735352, 1.02051, 1.45215, 0.615723...]" ]
+    CLONE_18 -> Add_3957
+    Relu_3953 -> Convolution_3955
+    CLONE_19[ shape="box"  style="dashed"  color="black"  label="conv3/stage2/3x3/bn/mean/Fused_Mul__copy\nConstant_3954\nConstant
+{f16}[128,128,3,3]
+value: [0.0565796, 0.123779, 0.00432968, 0.0713501, 0.0542908, -0.0606995, 0.0403748...]" ]
+    CLONE_19 -> Convolution_3955
+    Add_3952 [shape=box color=black label="Mconv3_stage2_L1/sq\nAdd_3952\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3952 -> Relu_3953
+    Convolution_3950 [shape=box color=black label="Mconv3_stage2_L1/sq/WithoutBiases\nConvolution_3950\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3950 -> Add_3952
+    CLONE_20[ shape="box"  style="dashed"  color="black"  label="Mconv3_stage2_L1/sq/Dims5198\nConstant_3951\nConstant
+{f16}[1,128,1,1]
+value: [0.360352, 0.134888, 0.0269623, -0.0964966, 0.0589905, -0.0661011, 0.109741...]" ]
+    CLONE_20 -> Add_3952
+    Add_3948 [shape=box color=black label="Mconv2_stage2_L1/5x5/res\nAdd_3948\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3948 -> Convolution_3950
+    CLONE_21[ shape="box"  style="dashed"  color="black"  label="451\nConstant_3949\nConstant
+{f16}[128,128,1,1]
+value: [0.0185242, -0.160645, 0.117249, -0.0175781, 0.0606995, 0.0368347, 0.0436096...]" ]
+    CLONE_21 -> Convolution_3950
+    Relu_3937 [shape=box color=black label="relu/Mconv2_stage2_L1/sq\nRelu_3937\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3937 -> Add_3948
+    Relu_3947 [shape=box color=black label="relu/Mconv2_stage2_L1/3x3/2\nRelu_3947\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3947 -> Add_3948
+    Add_3946 [shape=box color=black label="Mconv2_stage2_L1/3x3/2/Fused_Add_\nAdd_3946\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3946 -> Relu_3947
+    Convolution_3944 [shape=box color=black label="Mconv2_stage2_L1/3x3/2/WithoutBiases\nConvolution_3944\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3944 -> Add_3946
+    CLONE_22[ shape="box"  style="dashed"  color="black"  label="data_add_88508855\nConstant_3945\nConstant
+{f16}[1,128,1,1]
+value: [0.856934, 0.0231476, 0.864258, -0.151978, 0.298584, 0.266846, 0.218506...]" ]
+    CLONE_22 -> Add_3946
+    Relu_3942 [shape=box color=black label="relu/Mconv2_stage2_L1/3x3\nRelu_3942\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3942 -> Convolution_3944
+    CLONE_23[ shape="box"  style="dashed"  color="black"  label="conv2/stage2/3x3/2/bn/mean/Fused_Mul__copy\nConstant_3943\nConstant
+{f16}[128,128,3,3]
+value: [0.0337219, 0.0115662, -0.0551147, 0.0457458, -0.0107727, -0.0549927, -0.0142593...]" ]
+    CLONE_23 -> Convolution_3944
+    Add_3941 [shape=box color=black label="Mconv2_stage2_L1/3x3/Fused_Add_\nAdd_3941\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3941 -> Relu_3942
+    Convolution_3939 [shape=box color=black label="Mconv2_stage2_L1/3x3/WithoutBiases\nConvolution_3939\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3939 -> Add_3941
+    CLONE_24[ shape="box"  style="dashed"  color="black"  label="data_add_88428847\nConstant_3940\nConstant
+{f16}[1,128,1,1]
+value: [0.758301, 0.385498, 0.428955, 0.208984, 0.495361, 1.61719, 0.808105...]" ]
+    CLONE_24 -> Add_3941
+    Relu_3937 -> Convolution_3939
+    CLONE_25[ shape="box"  style="dashed"  color="black"  label="conv2/stage2/3x3/bn/mean/Fused_Mul__copy\nConstant_3938\nConstant
+{f16}[128,128,3,3]
+value: [-0.127197, -0.0287476, 0.0550842, -0.0768433, -0.110352, 0.0322876, -0.0635376...]" ]
+    CLONE_25 -> Convolution_3939
+    Add_3936 [shape=box color=black label="Mconv2_stage2_L1/sq\nAdd_3936\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3936 -> Relu_3937
+    Convolution_3934 [shape=box color=black label="Mconv2_stage2_L1/sq/WithoutBiases\nConvolution_3934\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3934 -> Add_3936
+    CLONE_26[ shape="box"  style="dashed"  color="black"  label="Mconv2_stage2_L1/sq/Dims5036\nConstant_3935\nConstant
+{f16}[1,128,1,1]
+value: [-0.117798, 0.275635, 0.133545, 0.133423, 0.326172, 0.3125, -0.0623474...]" ]
+    CLONE_26 -> Add_3936
+    Add_3932 [shape=box color=black label="Mconv1_stage2_L1/5x5/res\nAdd_3932\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3932 -> Convolution_3934
+    CLONE_27[ shape="box"  style="dashed"  color="black"  label="334\nConstant_3933\nConstant
+{f16}[128,128,1,1]
+value: [0.170288, -0.0438538, 0.0834351, 0.0184326, 0.0320129, -0.0180359, 0.0299072...]" ]
+    CLONE_27 -> Convolution_3934
+    Relu_3921 [shape=box color=black label="relu/Mconv1_stage2_L1/sq\nRelu_3921\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3921 -> Add_3932
+    Relu_3931 [shape=box color=black label="relu/Mconv1_stage2_L1/3x3/2\nRelu_3931\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3931 -> Add_3932
+    Add_3930 [shape=box color=black label="Mconv1_stage2_L1/3x3/2/Fused_Add_\nAdd_3930\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3930 -> Relu_3931
+    Convolution_3928 [shape=box color=black label="Mconv1_stage2_L1/3x3/2/WithoutBiases\nConvolution_3928\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3928 -> Add_3930
+    CLONE_28[ shape="box"  style="dashed"  color="black"  label="data_add_88348839\nConstant_3929\nConstant
+{f16}[1,128,1,1]
+value: [0.413086, 0.128906, 0.20752, -0.078125, 0.0232849, 0.122925, 0.100403...]" ]
+    CLONE_28 -> Add_3930
+    Relu_3926 [shape=box color=black label="relu/Mconv1_stage2_L1/3x3\nRelu_3926\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3926 -> Convolution_3928
+    CLONE_29[ shape="box"  style="dashed"  color="black"  label="conv1/stage2/3x3/2/bn/mean/Fused_Mul__copy\nConstant_3927\nConstant
+{f16}[128,128,3,3]
+value: [0.00731659, 0.0646973, -0.0369873, -0.00753021, 0.0169678, -0.0250854, 0.00289726...]" ]
+    CLONE_29 -> Convolution_3928
+    Add_3925 [shape=box color=black label="Mconv1_stage2_L1/3x3/Fused_Add_\nAdd_3925\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3925 -> Relu_3926
+    Convolution_3923 [shape=box color=black label="Mconv1_stage2_L1/3x3/WithoutBiases\nConvolution_3923\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3923 -> Add_3925
+    CLONE_30[ shape="box"  style="dashed"  color="black"  label="data_add_88268831\nConstant_3924\nConstant
+{f16}[1,128,1,1]
+value: [1.625, 2.01562, -0.0582581, -1.51953, 2.63281, 0.601074, 0.953613...]" ]
+    CLONE_30 -> Add_3925
+    Relu_3921 -> Convolution_3923
+    CLONE_31[ shape="box"  style="dashed"  color="black"  label="conv1/stage2/3x3/bn/mean/Fused_Mul__copy\nConstant_3922\nConstant
+{f16}[128,128,3,3]
+value: [-0.0165863, -0.0446472, 0.0332947, -0.164795, 0.037323, 0.115295, -0.0328674...]" ]
+    CLONE_31 -> Convolution_3923
+    Add_3920 [shape=box color=black label="Mconv1_stage2_L1/sq\nAdd_3920\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3920 -> Relu_3921
+    Convolution_3918 [shape=box color=black label="Mconv1_stage2_L1/sq/WithoutBiases\nConvolution_3918\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3918 -> Add_3920
+    CLONE_32[ shape="box"  style="dashed"  color="black"  label="Mconv1_stage2_L1/sq/Dims5084\nConstant_3919\nConstant
+{f16}[1,128,1,1]
+value: [-0.0796509, 0.0307617, 0.148926, 0.181519, 0.360596, 0.127319, 0.253418...]" ]
+    CLONE_32 -> Add_3920
+    Concat_3916 [shape=box color=black label="concat_stage2\nConcat_3916\nConcat\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Concat_3916 -> Convolution_3918
+    CLONE_33[ shape="box"  style="dashed"  color="black"  label="245\nConstant_3917\nConstant
+{f16}[128,185,1,1]
+value: [-0.0228424, -0.102844, 0.0327148, 0.0457153, -0.0273438, 0.0153885, -0.0297546...]" ]
+    CLONE_33 -> Convolution_3918
+    Add_3906 [shape=box color=black label="conv5_5_CPM_L1\nAdd_3906\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3906 -> Concat_3916
+    Add_3915 [shape=box color=black label="conv5_5_CPM_L2\nAdd_3915\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3915 -> Concat_3916
+    Relu_3882 [shape=box color=black label="relu4_4_CPM\nRelu_3882\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3882 -> Concat_3916
+    Add_3881 [shape=box color=black label="conv4_4_CPM\nAdd_3881\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3881 -> Relu_3882
+    Convolution_3879 [shape=box color=black label="conv4_4_CPM/WithoutBiases\nConvolution_3879\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3879 -> Add_3881
+    CLONE_34[ shape="box"  style="dashed"  color="black"  label="conv4_4_CPM/Dims5090\nConstant_3880\nConstant
+{f16}[1,128,1,1]
+value: [0.0462952, 0.0158539, -0.413086, 0.234253, -0.110229, -0.0098877, 0.0944214...]" ]
+    CLONE_34 -> Add_3881
+    Add_3877 [shape=box color=black label="conv4_3_CPM/res\nAdd_3877\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3877 -> Convolution_3879
+    CLONE_35[ shape="box"  style="dashed"  color="black"  label="258\nConstant_3878\nConstant
+{f16}[128,128,3,3]
+value: [-0.0126801, 0.0166321, -0.0129013, 0.0266113, 0.00377655, 0.0125122, 0.0784302...]" ]
+    CLONE_35 -> Convolution_3879
+    Elu_3847 [shape=box color=black label="relu4_3_CPM/al\nElu_3847\nElu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Elu_3847 -> Add_3877
+    Elu_3876 [shape=box color=black label="relu4_3_CPM/inc\nElu_3876\nElu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Elu_3876 -> Add_3877
+    Add_3875 [shape=box color=black label="conv4_3_CPM/inc\nAdd_3875\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3875 -> Elu_3876
+    Convolution_3873 [shape=box color=black label="conv4_3_CPM/inc/WithoutBiases\nConvolution_3873\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3873 -> Add_3875
+    CLONE_36[ shape="box"  style="dashed"  color="black"  label="conv4_3_CPM/inc/Dims5030\nConstant_3874\nConstant
+{f16}[1,128,1,1]
+value: [0.0420227, 0.36084, 0.125366, 0.0747681, 0.338379, 0.285156, 0.263672...]" ]
+    CLONE_36 -> Add_3875
+    Elu_3871 [shape=box color=black label="relu4_3_CPM/dw3\nElu_3871\nElu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Elu_3871 -> Convolution_3873
+    CLONE_37[ shape="box"  style="dashed"  color="black"  label="318\nConstant_3872\nConstant
+{f16}[128,128,1,1]
+value: [-0.00397873, 0.00819397, 0.0171509, 0.0130768, -0.00256729, 3.65376e-05, 0.00230217...]" ]
+    CLONE_37 -> Convolution_3873
+    GroupConvolution_3870 [shape=box color=black label="conv4_3_CPM/dw3\nGroupConvolution_3870\nGroupConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    GroupConvolution_3870 -> Elu_3871
+    Elu_3868 [shape=box color=black label="relu/conv4_3_CPM/dw2/1x1\nElu_3868\nElu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Elu_3868 -> GroupConvolution_3870
+    CLONE_38[ shape="box"  style="dashed"  color="black"  label="207\nConstant_3869\nConstant
+{f16}[128,1,1,3,3]
+value: [-0.34082, -0.16272, 0.452393, 0.327393, -0.134888, 0.131592, 0.458252...]" ]
+    CLONE_38 -> GroupConvolution_3870
+    Add_3867 [shape=box color=black label="conv4_3_CPM/dw2/1x1\nAdd_3867\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3867 -> Elu_3868
+    Convolution_3865 [shape=box color=black label="conv4_3_CPM/dw2/1x1/WithoutBiases\nConvolution_3865\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3865 -> Add_3867
+    CLONE_39[ shape="box"  style="dashed"  color="black"  label="conv4_3_CPM/dw2/1x1/Dims5174\nConstant_3866\nConstant
+{f16}[1,128,1,1]
+value: [0.00866699, 0.0204468, 0.0038166, 0.00699615, 0.0237885, 0.00407791, 0.0408325...]" ]
+    CLONE_39 -> Add_3867
+    Elu_3863 [shape=box color=black label="relu4_3_CPM/dw2\nElu_3863\nElu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Elu_3863 -> Convolution_3865
+    CLONE_40[ shape="box"  style="dashed"  color="black"  label="302\nConstant_3864\nConstant
+{f16}[128,128,1,1]
+value: [0.00641251, 0.0224915, -0.00323868, -0.00994873, -0.00844574, -0.0055275, 0.0126572...]" ]
+    CLONE_40 -> Convolution_3865
+    GroupConvolution_3862 [shape=box color=black label="conv4_3_CPM/dw2\nGroupConvolution_3862\nGroupConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    GroupConvolution_3862 -> Elu_3863
+    Elu_3860 [shape=box color=black label="relu/conv4_3_CPM/dw1/1x1\nElu_3860\nElu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Elu_3860 -> GroupConvolution_3862
+    CLONE_41[ shape="box"  style="dashed"  color="black"  label="392\nConstant_3861\nConstant
+{f16}[128,1,1,3,3]
+value: [0.19458, -0.0749512, 0.294189, 0.349121, -0.342041, 0.0228729, -0.54248...]" ]
+    CLONE_41 -> GroupConvolution_3862
+    Add_3859 [shape=box color=black label="conv4_3_CPM/dw1/1x1\nAdd_3859\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3859 -> Elu_3860
+    Convolution_3857 [shape=box color=black label="conv4_3_CPM/dw1/1x1/WithoutBiases\nConvolution_3857\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3857 -> Add_3859
+    CLONE_42[ shape="box"  style="dashed"  color="black"  label="conv4_3_CPM/dw1/1x1/Dims5054\nConstant_3858\nConstant
+{f16}[1,128,1,1]
+value: [-0.00634766, 0.00488281, -0.0016098, 0.00255394, 0.00976562, -0.00469971, 0.00115681...]" ]
+    CLONE_42 -> Add_3859
+    Elu_3855 [shape=box color=black label="relu4_3_CPM/dw1\nElu_3855\nElu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Elu_3855 -> Convolution_3857
+    CLONE_43[ shape="box"  style="dashed"  color="black"  label="407\nConstant_3856\nConstant
+{f16}[128,128,1,1]
+value: [-0.00976562, 0.00796509, -0.00812531, -0.00466919, 0.0147171, -0.00602722, -0.0119171...]" ]
+    CLONE_43 -> Convolution_3857
+    GroupConvolution_3854 [shape=box color=black label="conv4_3_CPM/dw1\nGroupConvolution_3854\nGroupConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    GroupConvolution_3854 -> Elu_3855
+    Elu_3852 [shape=box color=black label="relu4_3_CPM/red\nElu_3852\nElu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Elu_3852 -> GroupConvolution_3854
+    CLONE_44[ shape="box"  style="dashed"  color="black"  label="460\nConstant_3853\nConstant
+{f16}[128,1,1,3,3]
+value: [0.100159, -0.284668, -0.292236, -0.289062, -0.325195, 0.339844, 0.323242...]" ]
+    CLONE_44 -> GroupConvolution_3854
+    Add_3851 [shape=box color=black label="conv4_3_CPM/red\nAdd_3851\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3851 -> Elu_3852
+    Convolution_3849 [shape=box color=black label="conv4_3_CPM/red/WithoutBiases\nConvolution_3849\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3849 -> Add_3851
+    CLONE_45[ shape="box"  style="dashed"  color="black"  label="conv4_3_CPM/red/Dims5018\nConstant_3850\nConstant
+{f16}[1,128,1,1]
+value: [-0.00101852, 0.0134201, -0.000183702, 0.0256653, 0.00387955, 0.00213623, 0.00132561...]" ]
+    CLONE_45 -> Add_3851
+    Elu_3847 -> Convolution_3849
+    CLONE_46[ shape="box"  style="dashed"  color="black"  label="231\nConstant_3848\nConstant
+{f16}[128,128,1,1]
+value: [0.00434113, 0.0137482, -0.0167694, -0.0113525, -0.00603485, 0.00585556, -0.017746...]" ]
+    CLONE_46 -> Convolution_3849
+    Add_3846 [shape=box color=black label="conv4_3_CPM/al\nAdd_3846\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3846 -> Elu_3847
+    Convolution_3844 [shape=box color=black label="conv4_3_CPM/al/WithoutBiases\nConvolution_3844\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3844 -> Add_3846
+    CLONE_47[ shape="box"  style="dashed"  color="black"  label="conv4_3_CPM/al/Dims5072\nConstant_3845\nConstant
+{f16}[1,128,1,1]
+value: [-0.0617371, -0.048645, -0.142822, -0.113464, -0.269775, -0.102966, -0.124207...]" ]
+    CLONE_47 -> Add_3846
+    Relu_3842 [shape=box color=black label="relu5_5/sep\nRelu_3842\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3842 -> Convolution_3844
+    CLONE_48[ shape="box"  style="dashed"  color="black"  label="214\nConstant_3843\nConstant
+{f16}[128,512,1,1]
+value: [0.0424805, 0.0107727, 0.00770187, 0.00634003, 0.0145874, -0.00655365, -0.0184631...]" ]
+    CLONE_48 -> Convolution_3844
+    Add_3841 [shape=box color=black label="conv5_5/sep/bn/variance/Fused_Add_\nAdd_3841\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3841 -> Relu_3842
+    Convolution_3839 [shape=box color=black label="conv5_5/sep\nConvolution_3839\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3839 -> Add_3841
+    CLONE_49[ shape="box"  style="dashed"  color="black"  label="data_add_88188823\nConstant_3840\nConstant
+{f16}[1,512,1,1]
+value: [0.132568, 0.529297, -0.587891, -0.416992, -0.341553, 0.0406799, -0.519043...]" ]
+    CLONE_49 -> Add_3841
+    Relu_3837 [shape=box color=black label="relu5_5/dw\nRelu_3837\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3837 -> Convolution_3839
+    CLONE_50[ shape="box"  style="dashed"  color="black"  label="conv5_5/sep/bn/mean/Fused_Mul__copy\nConstant_3838\nConstant
+{f16}[512,512,1,1]
+value: [-0.00857544, -0.0102081, -0.0289612, 0.021759, -0.0498657, -0.00556564, -0.021637...]" ]
+    CLONE_50 -> Convolution_3839
+    Add_3836 [shape=box color=black label="conv5_5/dw/bn/variance/Fused_Add_\nAdd_3836\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3836 -> Relu_3837
+    GroupConvolution_3834 [shape=box color=black label="conv5_5/dw\nGroupConvolution_3834\nGroupConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    GroupConvolution_3834 -> Add_3836
+    CLONE_51[ shape="box"  style="dashed"  color="black"  label="data_add_88108815\nConstant_3835\nConstant
+{f16}[1,512,1,1]
+value: [-1.23926, -1.39648, 1.47363, 1.25488, 1.25391, 1.83691, 3.94531...]" ]
+    CLONE_51 -> Add_3836
+    Relu_3832 [shape=box color=black label="relu5_4/sep\nRelu_3832\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3832 -> GroupConvolution_3834
+    CLONE_52[ shape="box"  style="dashed"  color="black"  label="conv5_5/dw/bn/mean/Fused_Mul__copy\nConstant_3833\nConstant
+{f16}[512,1,1,3,3]
+value: [0.165161, 0.0169525, 0.34375, 0.296387, 0.157593, 0.435547, 0.383789...]" ]
+    CLONE_52 -> GroupConvolution_3834
+    Add_3831 [shape=box color=black label="conv5_4/sep/bn/variance/Fused_Add_\nAdd_3831\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3831 -> Relu_3832
+    Convolution_3829 [shape=box color=black label="conv5_4/sep\nConvolution_3829\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3829 -> Add_3831
+    CLONE_53[ shape="box"  style="dashed"  color="black"  label="data_add_88028807\nConstant_3830\nConstant
+{f16}[1,512,1,1]
+value: [-0.385498, 0.540527, 0.238281, -1.74609, 1.79785, 0.850586, 1.0332...]" ]
+    CLONE_53 -> Add_3831
+    Relu_3827 [shape=box color=black label="relu5_4/dw\nRelu_3827\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3827 -> Convolution_3829
+    CLONE_54[ shape="box"  style="dashed"  color="black"  label="conv5_4/sep/bn/mean/Fused_Mul__copy\nConstant_3828\nConstant
+{f16}[512,512,1,1]
+value: [-0.0127945, -0.00584793, 0.00387001, -0.0192871, -0.0317078, -0.036499, -0.0193176...]" ]
+    CLONE_54 -> Convolution_3829
+    Add_3826 [shape=box color=black label="conv5_4/dw/bn/variance/Fused_Add_\nAdd_3826\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3826 -> Relu_3827
+    GroupConvolution_3824 [shape=box color=black label="conv5_4/dw\nGroupConvolution_3824\nGroupConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    GroupConvolution_3824 -> Add_3826
+    CLONE_55[ shape="box"  style="dashed"  color="black"  label="data_add_87948799\nConstant_3825\nConstant
+{f16}[1,512,1,1]
+value: [0.23291, 0.0455627, 2.27539, -0.813477, 0.0566406, -0.711426, -1.04785...]" ]
+    CLONE_55 -> Add_3826
+    Relu_3822 [shape=box color=black label="relu5_3/sep\nRelu_3822\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3822 -> GroupConvolution_3824
+    CLONE_56[ shape="box"  style="dashed"  color="black"  label="conv5_4/dw/bn/mean/Fused_Mul__copy\nConstant_3823\nConstant
+{f16}[512,1,1,3,3]
+value: [-0.0919189, -0.217407, -0.0384216, -0.019928, 1.72656, 0.0361023, 0.0183411...]" ]
+    CLONE_56 -> GroupConvolution_3824
+    Add_3821 [shape=box color=black label="conv5_3/sep/bn/variance/Fused_Add_\nAdd_3821\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3821 -> Relu_3822
+    Convolution_3819 [shape=box color=black label="conv5_3/sep\nConvolution_3819\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3819 -> Add_3821
+    CLONE_57[ shape="box"  style="dashed"  color="black"  label="data_add_87868791\nConstant_3820\nConstant
+{f16}[1,512,1,1]
+value: [0.244263, -0.258057, 0.486328, 0.4375, -2.14453, -1.02637, 1.86816...]" ]
+    CLONE_57 -> Add_3821
+    Relu_3817 [shape=box color=black label="relu5_3/dw\nRelu_3817\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3817 -> Convolution_3819
+    CLONE_58[ shape="box"  style="dashed"  color="black"  label="conv5_3/sep/bn/mean/Fused_Mul__copy\nConstant_3818\nConstant
+{f16}[512,512,1,1]
+value: [0.00423813, 0.00343323, -0.000417471, 0.00754547, -0.00526428, -0.00194359, 0.00180054...]" ]
+    CLONE_58 -> Convolution_3819
+    Add_3816 [shape=box color=black label="conv5_3/dw/bn/variance/Fused_Add_\nAdd_3816\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3816 -> Relu_3817
+    GroupConvolution_3814 [shape=box color=black label="conv5_3/dw\nGroupConvolution_3814\nGroupConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    GroupConvolution_3814 -> Add_3816
+    CLONE_59[ shape="box"  style="dashed"  color="black"  label="data_add_87788783\nConstant_3815\nConstant
+{f16}[1,512,1,1]
+value: [0.233276, -1.40723, 0.0132217, -0.881836, -0.522461, -0.363525, -0.674316...]" ]
+    CLONE_59 -> Add_3816
+    Relu_3812 [shape=box color=black label="relu5_2/sep\nRelu_3812\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3812 -> GroupConvolution_3814
+    CLONE_60[ shape="box"  style="dashed"  color="black"  label="conv5_3/dw/bn/mean/Fused_Mul__copy\nConstant_3813\nConstant
+{f16}[512,1,1,3,3]
+value: [-0.405762, -0.034668, -0.0209961, -0.09729, -0.601562, 0.0678101, 0.600098...]" ]
+    CLONE_60 -> GroupConvolution_3814
+    Add_3811 [shape=box color=black label="conv5_2/sep/bn/variance/Fused_Add_\nAdd_3811\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3811 -> Relu_3812
+    Convolution_3809 [shape=box color=black label="conv5_2/sep\nConvolution_3809\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3809 -> Add_3811
+    CLONE_61[ shape="box"  style="dashed"  color="black"  label="data_add_87708775\nConstant_3810\nConstant
+{f16}[1,512,1,1]
+value: [0.801758, -1.17285, -0.911133, 0.384033, -0.0844727, 0.969238, -1.42773...]" ]
+    CLONE_61 -> Add_3811
+    Relu_3807 [shape=box color=black label="relu5_2/dw\nRelu_3807\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3807 -> Convolution_3809
+    CLONE_62[ shape="box"  style="dashed"  color="black"  label="conv5_2/sep/bn/mean/Fused_Mul__copy\nConstant_3808\nConstant
+{f16}[512,512,1,1]
+value: [-0.00937653, 0.016449, -0.00823975, -0.00701523, -0.00993347, -0.0190887, -0.0620422...]" ]
+    CLONE_62 -> Convolution_3809
+    Add_3806 [shape=box color=black label="conv5_2/dw/bn/variance/Fused_Add_\nAdd_3806\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3806 -> Relu_3807
+    GroupConvolution_3804 [shape=box color=black label="conv5_2/dw\nGroupConvolution_3804\nGroupConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    GroupConvolution_3804 -> Add_3806
+    CLONE_63[ shape="box"  style="dashed"  color="black"  label="data_add_87628767\nConstant_3805\nConstant
+{f16}[1,512,1,1]
+value: [-0.610352, -0.553711, 1.65527, -0.918945, 1.58887, -0.121155, 0.387451...]" ]
+    CLONE_63 -> Add_3806
+    Relu_3802 [shape=box color=black label="relu5_1/sep\nRelu_3802\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3802 -> GroupConvolution_3804
+    CLONE_64[ shape="box"  style="dashed"  color="black"  label="conv5_2/dw/bn/mean/Fused_Mul__copy\nConstant_3803\nConstant
+{f16}[512,1,1,3,3]
+value: [0.42041, 0.919434, 0.605469, 0.910645, 0.674316, -0.253418, 0.410156...]" ]
+    CLONE_64 -> GroupConvolution_3804
+    Add_3801 [shape=box color=black label="conv5_1/sep/bn/variance/Fused_Add_\nAdd_3801\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3801 -> Relu_3802
+    Convolution_3799 [shape=box color=black label="conv5_1/sep\nConvolution_3799\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3799 -> Add_3801
+    CLONE_65[ shape="box"  style="dashed"  color="black"  label="data_add_87548759\nConstant_3800\nConstant
+{f16}[1,512,1,1]
+value: [0.630371, 0.808105, 0.0384521, -0.1875, 1.64551, -0.0447998, 0.625977...]" ]
+    CLONE_65 -> Add_3801
+    Relu_3797 [shape=box color=black label="relu5_1/dw\nRelu_3797\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3797 -> Convolution_3799
+    CLONE_66[ shape="box"  style="dashed"  color="black"  label="conv5_1/sep/bn/mean/Fused_Mul__copy\nConstant_3798\nConstant
+{f16}[512,512,1,1]
+value: [-0.0149612, 0.0179291, 0.00431824, -0.0166168, -0.0240479, 0.0211182, 0.0618286...]" ]
+    CLONE_66 -> Convolution_3799
+    Add_3796 [shape=box color=black label="conv5_1/dw/bn/variance/Fused_Add_\nAdd_3796\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3796 -> Relu_3797
+    GroupConvolution_3794 [shape=box color=black label="conv5_1/dw\nGroupConvolution_3794\nGroupConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    GroupConvolution_3794 -> Add_3796
+    CLONE_67[ shape="box"  style="dashed"  color="black"  label="data_add_87468751\nConstant_3795\nConstant
+{f16}[1,512,1,1]
+value: [-1.7334, -0.404297, 2.04102, 0.137085, 2.59766, -0.00811768, -0.118896...]" ]
+    CLONE_67 -> Add_3796
+    Relu_3792 [shape=box color=black label="relu4_2/sep\nRelu_3792\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3792 -> GroupConvolution_3794
+    CLONE_68[ shape="box"  style="dashed"  color="black"  label="conv5_1/dw/bn/mean/Fused_Mul__copy\nConstant_3793\nConstant
+{f16}[512,1,1,3,3]
+value: [0.305664, 0.204712, 0.321289, 0.104248, 1.18457, -0.344238, 0.276123...]" ]
+    CLONE_68 -> GroupConvolution_3794
+    Add_3791 [shape=box color=black label="conv4_2/sep/bn/variance/Fused_Add_\nAdd_3791\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3791 -> Relu_3792
+    Convolution_3789 [shape=box color=black label="conv4_2/sep\nConvolution_3789\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3789 -> Add_3791
+    CLONE_69[ shape="box"  style="dashed"  color="black"  label="data_add_87388743\nConstant_3790\nConstant
+{f16}[1,512,1,1]
+value: [3.91992, -0.410645, 0.439453, 0.663574, 1.15234, -3.13281, -0.227417...]" ]
+    CLONE_69 -> Add_3791
+    Relu_3787 [shape=box color=black label="relu4_2/dw\nRelu_3787\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3787 -> Convolution_3789
+    CLONE_70[ shape="box"  style="dashed"  color="black"  label="conv4_2/sep/bn/mean/Fused_Mul__copy\nConstant_3788\nConstant
+{f16}[512,256,1,1]
+value: [-0.0545349, -0.168823, -0.167725, 0.0701904, -0.0250397, -0.0440979, -0.0880127...]" ]
+    CLONE_70 -> Convolution_3789
+    Add_3786 [shape=box color=black label="conv4_2/dw/bn/variance/Fused_Add_\nAdd_3786\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3786 -> Relu_3787
+    GroupConvolution_3784 [shape=box color=black label="conv4_2/dw\nGroupConvolution_3784\nGroupConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    GroupConvolution_3784 -> Add_3786
+    CLONE_71[ shape="box"  style="dashed"  color="black"  label="data_add_87308735\nConstant_3785\nConstant
+{f16}[1,256,1,1]
+value: [0.929688, -0.0682373, 3.86914, 3.61133, 2.13281, -0.038147, -0.0872192...]" ]
+    CLONE_71 -> Add_3786
+    Relu_3782 [shape=box color=black label="relu4_1/sep\nRelu_3782\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3782 -> GroupConvolution_3784
+    CLONE_72[ shape="box"  style="dashed"  color="black"  label="conv4_2/dw/bn/mean/Fused_Mul__copy\nConstant_3783\nConstant
+{f16}[256,1,1,3,3]
+value: [-0.162231, 0.152832, 0.612793, -0.17041, 0.715332, 0.169434, -0.102356...]" ]
+    CLONE_72 -> GroupConvolution_3784
+    Add_3781 [shape=box color=black label="conv4_1/sep/bn/variance/Fused_Add_\nAdd_3781\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3781 -> Relu_3782
+    Convolution_3779 [shape=box color=black label="conv4_1/sep\nConvolution_3779\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3779 -> Add_3781
+    CLONE_73[ shape="box"  style="dashed"  color="black"  label="data_add_87228727\nConstant_3780\nConstant
+{f16}[1,256,1,1]
+value: [0.021286, -0.419189, 1.2041, 0.654785, -0.155762, -0.264404, 0.586426...]" ]
+    CLONE_73 -> Add_3781
+    Relu_3777 [shape=box color=black label="relu4_1/dw\nRelu_3777\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3777 -> Convolution_3779
+    CLONE_74[ shape="box"  style="dashed"  color="black"  label="conv4_1/sep/bn/mean/Fused_Mul__copy\nConstant_3778\nConstant
+{f16}[256,256,1,1]
+value: [-0.0563965, -0.0457764, -0.0500793, -0.0135269, 0.0516663, 0.00418854, 0.0189972...]" ]
+    CLONE_74 -> Convolution_3779
+    Add_3776 [shape=box color=black label="conv4_1/dw/bn/variance/Fused_Add_\nAdd_3776\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3776 -> Relu_3777
+    GroupConvolution_3774 [shape=box color=black label="conv4_1/dw\nGroupConvolution_3774\nGroupConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    GroupConvolution_3774 -> Add_3776
+    CLONE_75[ shape="box"  style="dashed"  color="black"  label="data_add_87148719\nConstant_3775\nConstant
+{f16}[1,256,1,1]
+value: [-0.19043, 0.558105, 0.458252, 0.302246, -0.643066, -0.16748, 0.217529...]" ]
+    CLONE_75 -> Add_3776
+    Relu_3772 [shape=box color=black label="relu3_2/sep\nRelu_3772\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3772 -> GroupConvolution_3774
+    CLONE_76[ shape="box"  style="dashed"  color="black"  label="conv4_1/dw/bn/mean/Fused_Mul__copy\nConstant_3773\nConstant
+{f16}[256,1,1,3,3]
+value: [0.227173, 0.560547, -0.052002, 0.561035, 1.16895, -1.16211, -0.124207...]" ]
+    CLONE_76 -> GroupConvolution_3774
+    Add_3771 [shape=box color=black label="conv3_2/sep/bn/variance/Fused_Add_\nAdd_3771\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3771 -> Relu_3772
+    Convolution_3769 [shape=box color=black label="conv3_2/sep\nConvolution_3769\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3769 -> Add_3771
+    CLONE_77[ shape="box"  style="dashed"  color="black"  label="data_add_87068711\nConstant_3770\nConstant
+{f16}[1,256,1,1]
+value: [1.72656, 1.16602, 0.100525, 1.12012, 1.24023, -0.0262604, -0.401123...]" ]
+    CLONE_77 -> Add_3771
+    Relu_3767 [shape=box color=black label="relu3_2/dw\nRelu_3767\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3767 -> Convolution_3769
+    CLONE_78[ shape="box"  style="dashed"  color="black"  label="conv3_2/sep/bn/mean/Fused_Mul__copy\nConstant_3768\nConstant
+{f16}[256,128,1,1]
+value: [-0.0575867, -0.0523682, 0.0489502, -0.0494995, -0.0202942, 0.0372925, 0.00370407...]" ]
+    CLONE_78 -> Convolution_3769
+    Add_3766 [shape=box color=black label="conv3_2/dw/bn/variance/Fused_Add_\nAdd_3766\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3766 -> Relu_3767
+    GroupConvolution_3764 [shape=box color=black label="conv3_2/dw\nGroupConvolution_3764\nGroupConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    GroupConvolution_3764 -> Add_3766
+    CLONE_79[ shape="box"  style="dashed"  color="black"  label="data_add_86988703\nConstant_3765\nConstant
+{f16}[1,128,1,1]
+value: [7.125, -0.0652466, 0.110901, 3.13281, 0.226318, 0.00143051, 0.0422668...]" ]
+    CLONE_79 -> Add_3766
+    Relu_3762 [shape=box color=black label="relu3_1/sep\nRelu_3762\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3762 -> GroupConvolution_3764
+    CLONE_80[ shape="box"  style="dashed"  color="black"  label="conv3_2/dw/bn/mean/Fused_Mul__copy\nConstant_3763\nConstant
+{f16}[128,1,1,3,3]
+value: [-0.429443, -0.736816, -0.480713, -0.722656, -1.17871, -0.726074, -0.452393...]" ]
+    CLONE_80 -> GroupConvolution_3764
+    Add_3761 [shape=box color=black label="conv3_1/sep/bn/variance/Fused_Add_\nAdd_3761\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3761 -> Relu_3762
+    Convolution_3759 [shape=box color=black label="conv3_1/sep\nConvolution_3759\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3759 -> Add_3761
+    CLONE_81[ shape="box"  style="dashed"  color="black"  label="data_add_86908695\nConstant_3760\nConstant
+{f16}[1,128,1,1]
+value: [0.717773, 0.686035, 1.99316, 2.08203, 0.335938, 0.937988, 1.75781...]" ]
+    CLONE_81 -> Add_3761
+    Relu_3757 [shape=box color=black label="relu3_1/dw\nRelu_3757\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3757 -> Convolution_3759
+    CLONE_82[ shape="box"  style="dashed"  color="black"  label="conv3_1/sep/bn/mean/Fused_Mul__copy\nConstant_3758\nConstant
+{f16}[128,128,1,1]
+value: [-0.0567322, 0.0349121, 0.0109329, 0.0210266, 0.0515137, -0.0776978, 0.027771...]" ]
+    CLONE_82 -> Convolution_3759
+    Add_3756 [shape=box color=black label="conv3_1/dw/bn/variance/Fused_Add_\nAdd_3756\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3756 -> Relu_3757
+    GroupConvolution_3754 [shape=box color=black label="conv3_1/dw\nGroupConvolution_3754\nGroupConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    GroupConvolution_3754 -> Add_3756
+    CLONE_83[ shape="box"  style="dashed"  color="black"  label="data_add_86828687\nConstant_3755\nConstant
+{f16}[1,128,1,1]
+value: [0.258301, -0.0179138, -1.23633, 0.207031, 0.599609, -1.31641, 0.0839233...]" ]
+    CLONE_83 -> Add_3756
+    Relu_3752 [shape=box color=black label="relu2_2/sep\nRelu_3752\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3752 -> GroupConvolution_3754
+    CLONE_84[ shape="box"  style="dashed"  color="black"  label="conv3_1/dw/bn/mean/Fused_Mul__copy\nConstant_3753\nConstant
+{f16}[128,1,1,3,3]
+value: [-0.241699, 0.294434, -0.171997, 0.243042, 1.87207, -0.260254, -0.254883...]" ]
+    CLONE_84 -> GroupConvolution_3754
+    Add_3751 [shape=box color=black label="conv2_2/sep/bn/variance/Fused_Add_\nAdd_3751\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3751 -> Relu_3752
+    Convolution_3749 [shape=box color=black label="conv2_2/sep\nConvolution_3749\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3749 -> Add_3751
+    CLONE_85[ shape="box"  style="dashed"  color="black"  label="data_add_86748679\nConstant_3750\nConstant
+{f16}[1,128,1,1]
+value: [0.746094, 0.650879, 0.772461, 0.625488, 0.427002, 1.42969, 3.2793...]" ]
+    CLONE_85 -> Add_3751
+    Relu_3747 [shape=box color=black label="relu2_2/dw\nRelu_3747\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3747 -> Convolution_3749
+    CLONE_86[ shape="box"  style="dashed"  color="black"  label="conv2_2/sep/bn/mean/Fused_Mul__copy\nConstant_3748\nConstant
+{f16}[128,64,1,1]
+value: [0.0446472, 0.039917, -0.0068512, 0.0112305, -0.0742188, -0.0130081, -0.0282593...]" ]
+    CLONE_86 -> Convolution_3749
+    Add_3746 [shape=box color=black label="conv2_2/dw/bn/variance/Fused_Add_\nAdd_3746\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3746 -> Relu_3747
+    GroupConvolution_3744 [shape=box color=black label="conv2_2/dw\nGroupConvolution_3744\nGroupConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    GroupConvolution_3744 -> Add_3746
+    CLONE_87[ shape="box"  style="dashed"  color="black"  label="data_add_86668671\nConstant_3745\nConstant
+{f16}[1,64,1,1]
+value: [2.86523, 0.321045, 0.231323, 0.302246, -0.00847626, 0.830078, -0.0930786...]" ]
+    CLONE_87 -> Add_3746
+    Relu_3742 [shape=box color=black label="relu2_1/sep\nRelu_3742\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3742 -> GroupConvolution_3744
+    CLONE_88[ shape="box"  style="dashed"  color="black"  label="conv2_2/dw/bn/mean/Fused_Mul__copy\nConstant_3743\nConstant
+{f16}[64,1,1,3,3]
+value: [-0.1604, -0.348877, -0.169434, -0.415771, -0.736328, -0.31665, -0.262695...]" ]
+    CLONE_88 -> GroupConvolution_3744
+    Add_3741 [shape=box color=black label="conv2_1/sep/bn/variance/Fused_Add_\nAdd_3741\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3741 -> Relu_3742
+    Convolution_3739 [shape=box color=black label="conv2_1/sep\nConvolution_3739\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3739 -> Add_3741
+    CLONE_89[ shape="box"  style="dashed"  color="black"  label="data_add_86588663\nConstant_3740\nConstant
+{f16}[1,64,1,1]
+value: [0.459717, -0.193726, 0.566406, -0.564941, 0.261719, -0.56543, 2.29883...]" ]
+    CLONE_89 -> Add_3741
+    Relu_3737 [shape=box color=black label="relu2_1/dw\nRelu_3737\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3737 -> Convolution_3739
+    CLONE_90[ shape="box"  style="dashed"  color="black"  label="conv2_1/sep/bn/mean/Fused_Mul__copy\nConstant_3738\nConstant
+{f16}[64,32,1,1]
+value: [-0.0371399, -0.0452881, -0.354004, 0.00168133, -0.120789, -0.00357437, 0.36792...]" ]
+    CLONE_90 -> Convolution_3739
+    Add_3736 [shape=box color=black label="conv2_1/dw/bn/variance/Fused_Add_\nAdd_3736\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3736 -> Relu_3737
+    GroupConvolution_3734 [shape=box color=black label="conv2_1/dw\nGroupConvolution_3734\nGroupConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    GroupConvolution_3734 -> Add_3736
+    CLONE_91[ shape="box"  style="dashed"  color="black"  label="data_add_86508655\nConstant_3735\nConstant
+{f16}[1,32,1,1]
+value: [-0.16272, 0.469238, 0.632324, 3.65234, 0.23877, -0.591309, 1.13379...]" ]
+    CLONE_91 -> Add_3736
+    Relu_3732 [shape=box color=black label="relu1\nRelu_3732\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3732 -> GroupConvolution_3734
+    CLONE_92[ shape="box"  style="dashed"  color="black"  label="conv2_1/dw/bn/mean/Fused_Mul__copy\nConstant_3733\nConstant
+{f16}[32,1,1,3,3]
+value: [-0.0186157, -0.401855, -0.180298, 0.320557, 2.2793, -3.51367, -0.580566...]" ]
+    CLONE_92 -> GroupConvolution_3734
+    Add_3731 [shape=box color=black label="conv1/bn/variance/Fused_Add_\nAdd_3731\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3731 -> Relu_3732
+    Convolution_3729 [shape=box color=black label="conv1\nConvolution_3729\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3729 -> Add_3731
+    CLONE_93[ shape="box"  style="dashed"  color="black"  label="data_add_86428647\nConstant_3730\nConstant
+{f16}[1,32,1,1]
+value: [0.991211, 1.41016, 1.61719, 1.32715, 1.40137, 0.936523, 1.79688...]" ]
+    CLONE_93 -> Add_3731
+    Add_3727 [shape=box color=black label="data/mean/Fused_Add_\nAdd_3727\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3727 -> Convolution_3729
+    CLONE_94[ shape="box"  style="dashed"  color="black"  label="conv1/bn/mean/Fused_Mul__copy\nConstant_3728\nConstant
+{f16}[32,3,3,3]
+value: [-0.847656, 0.164307, 0.481689, -0.794922, -0.337891, 0.187866, 0.0830688...]" ]
+    CLONE_94 -> Convolution_3729
+    Multiply_3725 [shape=box color=black label="data/scale/Fused_Mul_\nMultiply_3725\nMultiply\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Multiply_3725 -> Add_3727
+    CLONE_95[ shape="box"  style="dashed"  color="black"  label="data_add_863914744\nConstant_3726\nConstant
+{f16}[1,3,1,1]
+value: [-0.501953, -0.501953, -0.501953]" ]
+    CLONE_95 -> Add_3727
+    CLONE_96[ shape="box"  style="dashed"  color="blue"  label="data\nParameter_3723\nParameter
+{f16}[1,3,256,456]" ]
+    CLONE_96 -> Multiply_3725
+    CLONE_97[ shape="box"  style="dashed"  color="black"  label="data_mul_863714489\nConstant_3724\nConstant
+{f16}[1,1,1,1]
+value: [0.00392151]" ]
+    CLONE_97 -> Multiply_3725
+    Convolution_3913 [shape=box color=black label="conv5_5_CPM_L2/WithoutBiases\nConvolution_3913\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3913 -> Add_3915
+    CLONE_98[ shape="box"  style="dashed"  color="black"  label="conv5_5_CPM_L2/Dims5048\nConstant_3914\nConstant
+{f16}[1,19,1,1]
+value: [-0.00156975, -1.66297e-05, 0.00264359, 0.0045929, -0.00380707, 0.00350189, -0.00917816...]" ]
+    CLONE_98 -> Add_3915
+    Relu_3911 [shape=box color=black label="relu5_4_CPM_L2\nRelu_3911\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3911 -> Convolution_3913
+    CLONE_99[ shape="box"  style="dashed"  color="black"  label="351\nConstant_3912\nConstant
+{f16}[19,512,1,1]
+value: [0.00397491, 0.0297699, -0.0675659, -0.008461, -0.147217, -0.00223732, 0.021759...]" ]
+    CLONE_99 -> Convolution_3913
+    Add_3910 [shape=box color=black label="conv5_4_CPM_L2\nAdd_3910\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3910 -> Relu_3911
+    Convolution_3908 [shape=box color=black label="conv5_4_CPM_L2/WithoutBiases\nConvolution_3908\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3908 -> Add_3910
+    CLONE_100[ shape="box"  style="dashed"  color="black"  label="conv5_4_CPM_L2/Dims5042\nConstant_3909\nConstant
+{f16}[1,512,1,1]
+value: [0.0375061, -0.0376282, 0.0110931, 0.0570374, 0.0593567, -0.0961304, -0.00818634...]" ]
+    CLONE_100 -> Add_3910
+    Relu_3897 [shape=box color=black label="relu5_3_CPM_L1\nRelu_3897\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3897 -> Convolution_3908
+    CLONE_101[ shape="box"  style="dashed"  color="black"  label="336\nConstant_3907\nConstant
+{f16}[512,128,1,1]
+value: [0.0111237, 0.0114288, 0.0243835, 0.00297165, 0.0326538, 0.0297089, -0.00150299...]" ]
+    CLONE_101 -> Convolution_3908
+    Add_3896 [shape=box color=black label="conv5_3_CPM_L1\nAdd_3896\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3896 -> Relu_3897
+    Convolution_3894 [shape=box color=black label="conv5_3_CPM_L1/WithoutBiases\nConvolution_3894\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3894 -> Add_3896
+    CLONE_102[ shape="box"  style="dashed"  color="black"  label="conv5_3_CPM_L1/Dims5060\nConstant_3895\nConstant
+{f16}[1,128,1,1]
+value: [0.06427, 0.0494995, 0.0169525, 0.203735, 0.159302, 0.267578, 0.0141754...]" ]
+    CLONE_102 -> Add_3896
+    Relu_3892 [shape=box color=black label="relu5_2_CPM_L1\nRelu_3892\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3892 -> Convolution_3894
+    CLONE_103[ shape="box"  style="dashed"  color="black"  label="440\nConstant_3893\nConstant
+{f16}[128,128,3,3]
+value: [0.0395203, 0.0672607, -0.0242615, 0.0363464, 0.00788879, -0.00219345, 0.00989532...]" ]
+    CLONE_103 -> Convolution_3894
+    Add_3891 [shape=box color=black label="conv5_2_CPM_L1\nAdd_3891\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3891 -> Relu_3892
+    Convolution_3889 [shape=box color=black label="conv5_2_CPM_L1/WithoutBiases\nConvolution_3889\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3889 -> Add_3891
+    CLONE_104[ shape="box"  style="dashed"  color="black"  label="conv5_2_CPM_L1/Dims5078\nConstant_3890\nConstant
+{f16}[1,128,1,1]
+value: [0.0320129, 0.147583, 0.107483, -0.76709, 0.19104, -0.00321007, 0.0559998...]" ]
+    CLONE_104 -> Add_3891
+    Relu_3887 [shape=box color=black label="relu5_1_CPM_L1\nRelu_3887\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3887 -> Convolution_3889
+    CLONE_105[ shape="box"  style="dashed"  color="black"  label="235\nConstant_3888\nConstant
+{f16}[128,128,3,3]
+value: [0.0317688, 0.00148773, 0.0313721, -0.0384521, -0.0589294, -0.0368958, 0.00923157...]" ]
+    CLONE_105 -> Convolution_3889
+    Add_3886 [shape=box color=black label="conv5_1_CPM_L1\nAdd_3886\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3886 -> Relu_3887
+    Convolution_3884 [shape=box color=black label="conv5_1_CPM_L1/WithoutBiases\nConvolution_3884\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3884 -> Add_3886
+    CLONE_106[ shape="box"  style="dashed"  color="black"  label="conv5_1_CPM_L1/Dims5186\nConstant_3885\nConstant
+{f16}[1,128,1,1]
+value: [0.0292816, -4.23789e-05, 0.0714722, -0.113159, 0.135376, 0.195557, 0.0444641...]" ]
+    CLONE_106 -> Add_3886
+    Relu_3882 -> Convolution_3884
+    CLONE_107[ shape="box"  style="dashed"  color="black"  label="419\nConstant_3883\nConstant
+{f16}[128,128,3,3]
+value: [-0.016861, -0.0198669, -0.00535583, -0.0308075, -0.0478821, -0.0139084, -0.0506897...]" ]
+    CLONE_107 -> Convolution_3884
+    Convolution_3904 [shape=box color=black label="conv5_5_CPM_L1/WithoutBiases\nConvolution_3904\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3904 -> Add_3906
+    CLONE_108[ shape="box"  style="dashed"  color="black"  label="conv5_5_CPM_L1/Dims5024\nConstant_3905\nConstant
+{f16}[1,38,1,1]
+value: [-0.00215912, 0.0166626, 0.000836372, 0.0041008, 0.000153542, 0.00373268, -0.00126266...]" ]
+    CLONE_108 -> Add_3906
+    Relu_3902 [shape=box color=black label="relu5_4_CPM_L1\nRelu_3902\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_3902 -> Convolution_3904
+    CLONE_109[ shape="box"  style="dashed"  color="black"  label="255\nConstant_3903\nConstant
+{f16}[38,512,1,1]
+value: [-0.0674438, 0.00507355, 0.00182152, -0.0155869, 0.00117111, -0.0166626, 0.0035305...]" ]
+    CLONE_109 -> Convolution_3904
+    Add_3901 [shape=box color=black label="conv5_4_CPM_L1\nAdd_3901\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3901 -> Relu_3902
+    Convolution_3899 [shape=box color=black label="conv5_4_CPM_L1/WithoutBiases\nConvolution_3899\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3899 -> Add_3901
+    CLONE_110[ shape="box"  style="dashed"  color="black"  label="conv5_4_CPM_L1/Dims5120\nConstant_3900\nConstant
+{f16}[1,512,1,1]
+value: [0.0109177, 0.00170994, -0.00303078, 0.0180206, -0.0536194, 0.0773315, -0.00761795...]" ]
+    CLONE_110 -> Add_3901
+    Relu_3897 -> Convolution_3899
+    CLONE_111[ shape="box"  style="dashed"  color="black"  label="288\nConstant_3898\nConstant
+{f16}[512,128,1,1]
+value: [0.0126343, -0.000579834, 0.0052681, -0.0122528, 0.0825195, -0.0321045, -0.00140953...]" ]
+    CLONE_111 -> Convolution_3899
+    Add_4004 [shape=box color=black label="Mconv7_stage2_L2\nAdd_4004\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Result_4005 [shape=box color=crimson penwidth=1.5 label="Mconv7_stage2_L2/sink_port_0\nResult_4005\nResult\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_4004 -> Result_4005
+    Convolution_4002 [shape=box color=black label="Mconv7_stage2_L2/WithoutBiases\nConvolution_4002\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_4002 -> Add_4004
+    CLONE_112[ shape="box"  style="dashed"  color="black"  label="Mconv7_stage2_L2/Dims5168\nConstant_4003\nConstant
+{f16}[1,19,1,1]
+value: [0.000303507, 0.0002321, 0.000127673, 0.000163794, 0.000181675, 0.00037837, 0.000238299...]" ]
+    CLONE_112 -> Add_4004
+    Relu_4000 [shape=box color=black label="Mrelu6_stage2_L2\nRelu_4000\nRelu\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Relu_4000 -> Convolution_4002
+    CLONE_113[ shape="box"  style="dashed"  color="black"  label="300\nConstant_4001\nConstant
+{f16}[19,128,1,1]
+value: [-0.00235558, -0.0108643, 0.012764, -0.00337601, -0.00296593, -0.0511475, 0.000782967...]" ]
+    CLONE_113 -> Convolution_4002
+    Add_3999 [shape=box color=black label="Mconv6_stage2_L2\nAdd_3999\nAdd\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Add_3999 -> Relu_4000
+    Convolution_3997 [shape=box color=black label="Mconv6_stage2_L2/WithoutBiases\nConvolution_3997\nConvolution\ndevice=CPU" fillcolor=aliceblue style=filled]
+    Convolution_3997 -> Add_3999
+    CLONE_114[ shape="box"  style="dashed"  color="black"  label="Mconv6_stage2_L2/Dims5204\nConstant_3998\nConstant
+{f16}[1,128,1,1]
+value: [-0.020401, -0.0138779, -0.0130005, 0.01548, 0.00348282, -0.0308533, -0.0212097...]" ]
+    CLONE_114 -> Add_3999
+    Add_3996 -> Convolution_3997
+    CLONE_115[ shape="box"  style="dashed"  color="black"  label="463\nConstant_3722\nConstant
+{f16}[128,128,1,1]
+value: [0.00435257, -0.0553589, 0.0115128, -0.000759125, -0.031311, 0.0250549, -0.0269318...]" ]
+    CLONE_115 -> Convolution_3997
+}
