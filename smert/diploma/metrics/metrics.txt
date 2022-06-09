@@ -1,9 +1,11 @@
     MEAN                  MIN              MAX
 Latency:
-  CPU: 72.622 ms         68.296 ms 
-  GPU: 40.135 ms         39.639 ms 
-  HET: 39.675 ms         39.428 ms 
+  CPU: 78.65 ms         69.098 ms 
+  GPU:    None     
+  MUL:    None     
+  HET:    None     
 FPS:
-  CPU: 13.77                             14.642
-  GPU: 24.916                             25.228
-  HET: 25.205                             25.363
+  CPU: 12.715                             14.472
+  GPU:    None     
+  MUL:    None     
+  HET:    None     
