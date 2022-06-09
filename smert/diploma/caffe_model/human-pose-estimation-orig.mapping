@@ -1,0 +1,675 @@
+<?xml version="1.0"?>
+<mapping>
+	<map>
+		<framework name="image" output_port_id="image" />
+		<IR name="image" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv1_1" output_port_id="conv1_1" />
+		<IR name="conv1_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu1_1" output_port_id="conv1_1" />
+		<IR name="relu1_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv1_2" output_port_id="conv1_2" />
+		<IR name="conv1_2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu1_2" output_port_id="conv1_2" />
+		<IR name="relu1_2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="pool1_stage1" output_port_id="pool1_stage1" />
+		<IR name="pool1_stage1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv2_1" output_port_id="conv2_1" />
+		<IR name="conv2_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu2_1" output_port_id="conv2_1" />
+		<IR name="relu2_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv2_2" output_port_id="conv2_2" />
+		<IR name="conv2_2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu2_2" output_port_id="conv2_2" />
+		<IR name="relu2_2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="pool2_stage1" output_port_id="pool2_stage1" />
+		<IR name="pool2_stage1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv3_1" output_port_id="conv3_1" />
+		<IR name="conv3_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu3_1" output_port_id="conv3_1" />
+		<IR name="relu3_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv3_2" output_port_id="conv3_2" />
+		<IR name="conv3_2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu3_2" output_port_id="conv3_2" />
+		<IR name="relu3_2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv3_3" output_port_id="conv3_3" />
+		<IR name="conv3_3" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu3_3" output_port_id="conv3_3" />
+		<IR name="relu3_3" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv3_4" output_port_id="conv3_4" />
+		<IR name="conv3_4" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu3_4" output_port_id="conv3_4" />
+		<IR name="relu3_4" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="pool3_stage1" output_port_id="pool3_stage1" />
+		<IR name="pool3_stage1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv4_1" output_port_id="conv4_1" />
+		<IR name="conv4_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu4_1" output_port_id="conv4_1" />
+		<IR name="relu4_1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv4_2" output_port_id="conv4_2" />
+		<IR name="conv4_2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu4_2" output_port_id="conv4_2" />
+		<IR name="relu4_2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv4_3_CPM" output_port_id="conv4_3_CPM" />
+		<IR name="conv4_3_CPM" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu4_3_CPM" output_port_id="conv4_3_CPM" />
+		<IR name="relu4_3_CPM" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv4_4_CPM" output_port_id="conv4_4_CPM" />
+		<IR name="conv4_4_CPM" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu4_4_CPM" output_port_id="conv4_4_CPM" />
+		<IR name="relu4_4_CPM" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv5_1_CPM_L1" output_port_id="conv5_1_CPM_L1" />
+		<IR name="conv5_1_CPM_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu5_1_CPM_L1" output_port_id="conv5_1_CPM_L1" />
+		<IR name="relu5_1_CPM_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv5_2_CPM_L1" output_port_id="conv5_2_CPM_L1" />
+		<IR name="conv5_2_CPM_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu5_2_CPM_L1" output_port_id="conv5_2_CPM_L1" />
+		<IR name="relu5_2_CPM_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv5_3_CPM_L1" output_port_id="conv5_3_CPM_L1" />
+		<IR name="conv5_3_CPM_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu5_3_CPM_L1" output_port_id="conv5_3_CPM_L1" />
+		<IR name="relu5_3_CPM_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv5_4_CPM_L1" output_port_id="conv5_4_CPM_L1" />
+		<IR name="conv5_4_CPM_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu5_4_CPM_L1" output_port_id="conv5_4_CPM_L1" />
+		<IR name="relu5_4_CPM_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv5_5_CPM_L1" output_port_id="conv5_5_CPM_L1" />
+		<IR name="conv5_5_CPM_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv5_1_CPM_L2" output_port_id="conv5_1_CPM_L2" />
+		<IR name="conv5_1_CPM_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu5_1_CPM_L2" output_port_id="conv5_1_CPM_L2" />
+		<IR name="relu5_1_CPM_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv5_2_CPM_L2" output_port_id="conv5_2_CPM_L2" />
+		<IR name="conv5_2_CPM_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu5_2_CPM_L2" output_port_id="conv5_2_CPM_L2" />
+		<IR name="relu5_2_CPM_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv5_3_CPM_L2" output_port_id="conv5_3_CPM_L2" />
+		<IR name="conv5_3_CPM_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu5_3_CPM_L2" output_port_id="conv5_3_CPM_L2" />
+		<IR name="relu5_3_CPM_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv5_4_CPM_L2" output_port_id="conv5_4_CPM_L2" />
+		<IR name="conv5_4_CPM_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="relu5_4_CPM_L2" output_port_id="conv5_4_CPM_L2" />
+		<IR name="relu5_4_CPM_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="conv5_5_CPM_L2" output_port_id="conv5_5_CPM_L2" />
+		<IR name="conv5_5_CPM_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="concat_stage2" output_port_id="concat_stage2" />
+		<IR name="concat_stage2" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Mconv1_stage2_L1" output_port_id="Mconv1_stage2_L1" />
+		<IR name="Mconv1_stage2_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu1_stage2_L1" output_port_id="Mconv1_stage2_L1" />
+		<IR name="Mrelu1_stage2_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv2_stage2_L1" output_port_id="Mconv2_stage2_L1" />
+		<IR name="Mconv2_stage2_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu2_stage2_L1" output_port_id="Mconv2_stage2_L1" />
+		<IR name="Mrelu2_stage2_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv3_stage2_L1" output_port_id="Mconv3_stage2_L1" />
+		<IR name="Mconv3_stage2_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu3_stage2_L1" output_port_id="Mconv3_stage2_L1" />
+		<IR name="Mrelu3_stage2_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv4_stage2_L1" output_port_id="Mconv4_stage2_L1" />
+		<IR name="Mconv4_stage2_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu4_stage2_L1" output_port_id="Mconv4_stage2_L1" />
+		<IR name="Mrelu4_stage2_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv5_stage2_L1" output_port_id="Mconv5_stage2_L1" />
+		<IR name="Mconv5_stage2_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu5_stage2_L1" output_port_id="Mconv5_stage2_L1" />
+		<IR name="Mrelu5_stage2_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv6_stage2_L1" output_port_id="Mconv6_stage2_L1" />
+		<IR name="Mconv6_stage2_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu6_stage2_L1" output_port_id="Mconv6_stage2_L1" />
+		<IR name="Mrelu6_stage2_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv7_stage2_L1" output_port_id="Mconv7_stage2_L1" />
+		<IR name="Mconv7_stage2_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mconv1_stage2_L2" output_port_id="Mconv1_stage2_L2" />
+		<IR name="Mconv1_stage2_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu1_stage2_L2" output_port_id="Mconv1_stage2_L2" />
+		<IR name="Mrelu1_stage2_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv2_stage2_L2" output_port_id="Mconv2_stage2_L2" />
+		<IR name="Mconv2_stage2_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu2_stage2_L2" output_port_id="Mconv2_stage2_L2" />
+		<IR name="Mrelu2_stage2_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv3_stage2_L2" output_port_id="Mconv3_stage2_L2" />
+		<IR name="Mconv3_stage2_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu3_stage2_L2" output_port_id="Mconv3_stage2_L2" />
+		<IR name="Mrelu3_stage2_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv4_stage2_L2" output_port_id="Mconv4_stage2_L2" />
+		<IR name="Mconv4_stage2_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu4_stage2_L2" output_port_id="Mconv4_stage2_L2" />
+		<IR name="Mrelu4_stage2_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv5_stage2_L2" output_port_id="Mconv5_stage2_L2" />
+		<IR name="Mconv5_stage2_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu5_stage2_L2" output_port_id="Mconv5_stage2_L2" />
+		<IR name="Mrelu5_stage2_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv6_stage2_L2" output_port_id="Mconv6_stage2_L2" />
+		<IR name="Mconv6_stage2_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu6_stage2_L2" output_port_id="Mconv6_stage2_L2" />
+		<IR name="Mrelu6_stage2_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv7_stage2_L2" output_port_id="Mconv7_stage2_L2" />
+		<IR name="Mconv7_stage2_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="concat_stage3" output_port_id="concat_stage3" />
+		<IR name="concat_stage3" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Mconv1_stage3_L1" output_port_id="Mconv1_stage3_L1" />
+		<IR name="Mconv1_stage3_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu1_stage3_L1" output_port_id="Mconv1_stage3_L1" />
+		<IR name="Mrelu1_stage3_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv2_stage3_L1" output_port_id="Mconv2_stage3_L1" />
+		<IR name="Mconv2_stage3_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu2_stage3_L1" output_port_id="Mconv2_stage3_L1" />
+		<IR name="Mrelu2_stage3_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv3_stage3_L1" output_port_id="Mconv3_stage3_L1" />
+		<IR name="Mconv3_stage3_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu3_stage3_L1" output_port_id="Mconv3_stage3_L1" />
+		<IR name="Mrelu3_stage3_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv4_stage3_L1" output_port_id="Mconv4_stage3_L1" />
+		<IR name="Mconv4_stage3_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu4_stage3_L1" output_port_id="Mconv4_stage3_L1" />
+		<IR name="Mrelu4_stage3_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv5_stage3_L1" output_port_id="Mconv5_stage3_L1" />
+		<IR name="Mconv5_stage3_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu5_stage3_L1" output_port_id="Mconv5_stage3_L1" />
+		<IR name="Mrelu5_stage3_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv6_stage3_L1" output_port_id="Mconv6_stage3_L1" />
+		<IR name="Mconv6_stage3_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu6_stage3_L1" output_port_id="Mconv6_stage3_L1" />
+		<IR name="Mrelu6_stage3_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv7_stage3_L1" output_port_id="Mconv7_stage3_L1" />
+		<IR name="Mconv7_stage3_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mconv1_stage3_L2" output_port_id="Mconv1_stage3_L2" />
+		<IR name="Mconv1_stage3_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu1_stage3_L2" output_port_id="Mconv1_stage3_L2" />
+		<IR name="Mrelu1_stage3_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv2_stage3_L2" output_port_id="Mconv2_stage3_L2" />
+		<IR name="Mconv2_stage3_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu2_stage3_L2" output_port_id="Mconv2_stage3_L2" />
+		<IR name="Mrelu2_stage3_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv3_stage3_L2" output_port_id="Mconv3_stage3_L2" />
+		<IR name="Mconv3_stage3_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu3_stage3_L2" output_port_id="Mconv3_stage3_L2" />
+		<IR name="Mrelu3_stage3_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv4_stage3_L2" output_port_id="Mconv4_stage3_L2" />
+		<IR name="Mconv4_stage3_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu4_stage3_L2" output_port_id="Mconv4_stage3_L2" />
+		<IR name="Mrelu4_stage3_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv5_stage3_L2" output_port_id="Mconv5_stage3_L2" />
+		<IR name="Mconv5_stage3_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu5_stage3_L2" output_port_id="Mconv5_stage3_L2" />
+		<IR name="Mrelu5_stage3_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv6_stage3_L2" output_port_id="Mconv6_stage3_L2" />
+		<IR name="Mconv6_stage3_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu6_stage3_L2" output_port_id="Mconv6_stage3_L2" />
+		<IR name="Mrelu6_stage3_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv7_stage3_L2" output_port_id="Mconv7_stage3_L2" />
+		<IR name="Mconv7_stage3_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="concat_stage4" output_port_id="concat_stage4" />
+		<IR name="concat_stage4" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Mconv1_stage4_L1" output_port_id="Mconv1_stage4_L1" />
+		<IR name="Mconv1_stage4_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu1_stage4_L1" output_port_id="Mconv1_stage4_L1" />
+		<IR name="Mrelu1_stage4_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv2_stage4_L1" output_port_id="Mconv2_stage4_L1" />
+		<IR name="Mconv2_stage4_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu2_stage4_L1" output_port_id="Mconv2_stage4_L1" />
+		<IR name="Mrelu2_stage4_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv3_stage4_L1" output_port_id="Mconv3_stage4_L1" />
+		<IR name="Mconv3_stage4_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu3_stage4_L1" output_port_id="Mconv3_stage4_L1" />
+		<IR name="Mrelu3_stage4_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv4_stage4_L1" output_port_id="Mconv4_stage4_L1" />
+		<IR name="Mconv4_stage4_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu4_stage4_L1" output_port_id="Mconv4_stage4_L1" />
+		<IR name="Mrelu4_stage4_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv5_stage4_L1" output_port_id="Mconv5_stage4_L1" />
+		<IR name="Mconv5_stage4_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu5_stage4_L1" output_port_id="Mconv5_stage4_L1" />
+		<IR name="Mrelu5_stage4_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv6_stage4_L1" output_port_id="Mconv6_stage4_L1" />
+		<IR name="Mconv6_stage4_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu6_stage4_L1" output_port_id="Mconv6_stage4_L1" />
+		<IR name="Mrelu6_stage4_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv7_stage4_L1" output_port_id="Mconv7_stage4_L1" />
+		<IR name="Mconv7_stage4_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mconv1_stage4_L2" output_port_id="Mconv1_stage4_L2" />
+		<IR name="Mconv1_stage4_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu1_stage4_L2" output_port_id="Mconv1_stage4_L2" />
+		<IR name="Mrelu1_stage4_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv2_stage4_L2" output_port_id="Mconv2_stage4_L2" />
+		<IR name="Mconv2_stage4_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu2_stage4_L2" output_port_id="Mconv2_stage4_L2" />
+		<IR name="Mrelu2_stage4_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv3_stage4_L2" output_port_id="Mconv3_stage4_L2" />
+		<IR name="Mconv3_stage4_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu3_stage4_L2" output_port_id="Mconv3_stage4_L2" />
+		<IR name="Mrelu3_stage4_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv4_stage4_L2" output_port_id="Mconv4_stage4_L2" />
+		<IR name="Mconv4_stage4_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu4_stage4_L2" output_port_id="Mconv4_stage4_L2" />
+		<IR name="Mrelu4_stage4_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv5_stage4_L2" output_port_id="Mconv5_stage4_L2" />
+		<IR name="Mconv5_stage4_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu5_stage4_L2" output_port_id="Mconv5_stage4_L2" />
+		<IR name="Mrelu5_stage4_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv6_stage4_L2" output_port_id="Mconv6_stage4_L2" />
+		<IR name="Mconv6_stage4_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu6_stage4_L2" output_port_id="Mconv6_stage4_L2" />
+		<IR name="Mrelu6_stage4_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv7_stage4_L2" output_port_id="Mconv7_stage4_L2" />
+		<IR name="Mconv7_stage4_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="concat_stage5" output_port_id="concat_stage5" />
+		<IR name="concat_stage5" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Mconv1_stage5_L1" output_port_id="Mconv1_stage5_L1" />
+		<IR name="Mconv1_stage5_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu1_stage5_L1" output_port_id="Mconv1_stage5_L1" />
+		<IR name="Mrelu1_stage5_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv2_stage5_L1" output_port_id="Mconv2_stage5_L1" />
+		<IR name="Mconv2_stage5_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu2_stage5_L1" output_port_id="Mconv2_stage5_L1" />
+		<IR name="Mrelu2_stage5_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv3_stage5_L1" output_port_id="Mconv3_stage5_L1" />
+		<IR name="Mconv3_stage5_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu3_stage5_L1" output_port_id="Mconv3_stage5_L1" />
+		<IR name="Mrelu3_stage5_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv4_stage5_L1" output_port_id="Mconv4_stage5_L1" />
+		<IR name="Mconv4_stage5_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu4_stage5_L1" output_port_id="Mconv4_stage5_L1" />
+		<IR name="Mrelu4_stage5_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv5_stage5_L1" output_port_id="Mconv5_stage5_L1" />
+		<IR name="Mconv5_stage5_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu5_stage5_L1" output_port_id="Mconv5_stage5_L1" />
+		<IR name="Mrelu5_stage5_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv6_stage5_L1" output_port_id="Mconv6_stage5_L1" />
+		<IR name="Mconv6_stage5_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu6_stage5_L1" output_port_id="Mconv6_stage5_L1" />
+		<IR name="Mrelu6_stage5_L1" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv7_stage5_L1" output_port_id="Mconv7_stage5_L1" />
+		<IR name="Mconv7_stage5_L1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mconv1_stage5_L2" output_port_id="Mconv1_stage5_L2" />
+		<IR name="Mconv1_stage5_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu1_stage5_L2" output_port_id="Mconv1_stage5_L2" />
+		<IR name="Mrelu1_stage5_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv2_stage5_L2" output_port_id="Mconv2_stage5_L2" />
+		<IR name="Mconv2_stage5_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu2_stage5_L2" output_port_id="Mconv2_stage5_L2" />
+		<IR name="Mrelu2_stage5_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv3_stage5_L2" output_port_id="Mconv3_stage5_L2" />
+		<IR name="Mconv3_stage5_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu3_stage5_L2" output_port_id="Mconv3_stage5_L2" />
+		<IR name="Mrelu3_stage5_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv4_stage5_L2" output_port_id="Mconv4_stage5_L2" />
+		<IR name="Mconv4_stage5_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu4_stage5_L2" output_port_id="Mconv4_stage5_L2" />
+		<IR name="Mrelu4_stage5_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv5_stage5_L2" output_port_id="Mconv5_stage5_L2" />
+		<IR name="Mconv5_stage5_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu5_stage5_L2" output_port_id="Mconv5_stage5_L2" />
+		<IR name="Mrelu5_stage5_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv6_stage5_L2" output_port_id="Mconv6_stage5_L2" />
+		<IR name="Mconv6_stage5_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu6_stage5_L2" output_port_id="Mconv6_stage5_L2" />
+		<IR name="Mrelu6_stage5_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv7_stage5_L2" output_port_id="Mconv7_stage5_L2" />
+		<IR name="Mconv7_stage5_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="concat_stage6" output_port_id="concat_stage6" />
+		<IR name="concat_stage6" output_port_id="3" />
+	</map>
+	<map>
+		<framework name="Mconv1_stage6_L2" output_port_id="Mconv1_stage6_L2" />
+		<IR name="Mconv1_stage6_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu1_stage6_L2" output_port_id="Mconv1_stage6_L2" />
+		<IR name="Mrelu1_stage6_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv2_stage6_L2" output_port_id="Mconv2_stage6_L2" />
+		<IR name="Mconv2_stage6_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu2_stage6_L2" output_port_id="Mconv2_stage6_L2" />
+		<IR name="Mrelu2_stage6_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv3_stage6_L2" output_port_id="Mconv3_stage6_L2" />
+		<IR name="Mconv3_stage6_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu3_stage6_L2" output_port_id="Mconv3_stage6_L2" />
+		<IR name="Mrelu3_stage6_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv4_stage6_L2" output_port_id="Mconv4_stage6_L2" />
+		<IR name="Mconv4_stage6_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu4_stage6_L2" output_port_id="Mconv4_stage6_L2" />
+		<IR name="Mrelu4_stage6_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv5_stage6_L2" output_port_id="Mconv5_stage6_L2" />
+		<IR name="Mconv5_stage6_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu5_stage6_L2" output_port_id="Mconv5_stage6_L2" />
+		<IR name="Mrelu5_stage6_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv6_stage6_L2" output_port_id="Mconv6_stage6_L2" />
+		<IR name="Mconv6_stage6_L2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Mrelu6_stage6_L2" output_port_id="Mconv6_stage6_L2" />
+		<IR name="Mrelu6_stage6_L2" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mconv7_stage6_L2" output_port_id="Mconv7_stage6_L2" />
+		<IR name="Mconv7_stage6_L2" output_port_id="2" />
+	</map>
+</mapping>

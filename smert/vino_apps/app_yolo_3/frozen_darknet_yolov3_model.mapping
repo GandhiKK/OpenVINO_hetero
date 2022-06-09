@@ -1,0 +1,1295 @@
+<?xml version="1.0" ?>
+<mapping>
+	<map>
+		<framework name="detector/yolo-v3/Conv_1/weights/read" out_port_id="0"/>
+		<IR id="342" name="detector/yolo-v3/Conv_1/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1824318245_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_13" out_port_id="0"/>
+		<IR id="212" name="detector/darknet-53/add_13" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_47/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="306" name="detector/darknet-53/Conv_47/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv/weights/read" out_port_id="0"/>
+		<IR id="1" name="detector/truediv18321_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_10/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="67" name="detector/darknet-53/Conv_10/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/concat_7" out_port_id="0"/>
+		<IR id="425" name="detector/yolo-v3/concat_7" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_48/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="313" name="detector/darknet-53/Conv_48/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_11/weights/read" out_port_id="0"/>
+		<IR id="393" name="detector/yolo-v3/Conv_11/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1827918281_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_7/Conv2D" out_port_id="0"/>
+		<IR id="367" name="detector/yolo-v3/Conv_7/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_51/weights/read" out_port_id="0"/>
+		<IR id="329" name="detector/darknet-53/Conv_51/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1823518237_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_15/Conv2D" out_port_id="0"/>
+		<IR id="97" name="detector/darknet-53/Conv_15/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_8/LeakyRelu" out_port_id="0"/>
+		<IR id="56" name="LeakyReLU_2011622394" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_10/weights/read" out_port_id="0"/>
+		<IR id="64" name="detector/darknet-53/Conv_10/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1807118073_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_30/LeakyRelu" out_port_id="0"/>
+		<IR id="198" name="LeakyReLU_2012622174" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_3/Conv2D" out_port_id="0"/>
+		<IR id="20" name="detector/darknet-53/Conv_3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_14/weights/read" out_port_id="0"/>
+		<IR id="90" name="detector/darknet-53/Conv_14/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1808718089_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_4/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="363" name="detector/yolo-v3/Conv_4/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_34/Conv2D" out_port_id="0"/>
+		<IR id="220" name="detector/darknet-53/Conv_34/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_9/weights/read" out_port_id="0"/>
+		<IR id="58" name="detector/darknet-53/Conv_9/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1806718069_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_45/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="293" name="detector/darknet-53/Conv_45/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_44/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="287" name="detector/darknet-53/Conv_44/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_45/Conv2D" out_port_id="0"/>
+		<IR id="291" name="detector/darknet-53/Conv_45/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_16/LeakyRelu" out_port_id="0"/>
+		<IR id="431" name="LeakyReLU_2012522170" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_17/weights/read" out_port_id="0"/>
+		<IR id="109" name="detector/darknet-53/Conv_17/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1809918101_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_25/LeakyRelu" out_port_id="0"/>
+		<IR id="166" name="LeakyReLU_2015422198" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_22" out_port_id="0"/>
+		<IR id="335" name="detector/darknet-53/add_22" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_16" out_port_id="0"/>
+		<IR id="251" name="detector/darknet-53/add_16" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_20/LeakyRelu" out_port_id="0"/>
+		<IR id="134" name="LeakyReLU_2017022374" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_18/Conv2D" out_port_id="0"/>
+		<IR id="117" name="detector/darknet-53/Conv_18/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_6" out_port_id="0"/>
+		<IR id="115" name="detector/darknet-53/add_6" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_20/Conv2D" out_port_id="0"/>
+		<IR id="130" name="detector/darknet-53/Conv_20/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_37/LeakyRelu" out_port_id="0"/>
+		<IR id="244" name="LeakyReLU_2017322186" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_48/Conv2D" out_port_id="0"/>
+		<IR id="311" name="detector/darknet-53/Conv_48/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_15/weights/read" out_port_id="0"/>
+		<IR id="417" name="detector/yolo-v3/Conv_15/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1828718289_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_8/Conv2D" out_port_id="0"/>
+		<IR id="376" name="detector/yolo-v3/Conv_8/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_10/LeakyRelu" out_port_id="0"/>
+		<IR id="392" name="LeakyReLU_2013722278" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_39/Conv2D" out_port_id="0"/>
+		<IR id="253" name="detector/darknet-53/Conv_39/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_7/weights/read" out_port_id="0"/>
+		<IR id="366" name="detector/yolo-v3/Conv_7/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1825918261_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_4/weights/read" out_port_id="0"/>
+		<IR id="26" name="detector/darknet-53/Conv_4/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1804718049_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_24/LeakyRelu" out_port_id="0"/>
+		<IR id="160" name="LeakyReLU_2011722418" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_13/LeakyRelu" out_port_id="0"/>
+		<IR id="410" name="LeakyReLU_2012822322" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_50/weights/read" out_port_id="0"/>
+		<IR id="323" name="detector/darknet-53/Conv_50/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1823118233_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_33/LeakyRelu" out_port_id="0"/>
+		<IR id="218" name="LeakyReLU_2013322402" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_20/weights/read" out_port_id="0"/>
+		<IR id="450" name="detector/yolo-v3/Conv_20/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1831118313_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_5/Conv2D" out_port_id="0"/>
+		<IR id="33" name="detector/darknet-53/Conv_5/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_2/Conv2D" out_port_id="0"/>
+		<IR id="349" name="detector/yolo-v3/Conv_2/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_7/LeakyRelu" out_port_id="0"/>
+		<IR id="50" name="LeakyReLU_2013022314" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_4/Conv2D" out_port_id="0"/>
+		<IR id="27" name="detector/darknet-53/Conv_4/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_12/LeakyRelu" out_port_id="0"/>
+		<IR id="404" name="LeakyReLU_22410" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_17/Conv2D" out_port_id="0"/>
+		<IR id="433" name="detector/yolo-v3/Conv_17/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_4/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="29" name="detector/darknet-53/Conv_4/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_13/weights/read" out_port_id="0"/>
+		<IR id="405" name="detector/yolo-v3/Conv_13/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1829118293_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_15/LeakyRelu" out_port_id="0"/>
+		<IR id="101" name="LeakyReLU_2018422274" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_32/weights/read" out_port_id="0"/>
+		<IR id="206" name="detector/darknet-53/Conv_32/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1815918161_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_22/weights/read" out_port_id="0"/>
+		<IR id="142" name="detector/darknet-53/Conv_22/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1811918121_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_9/LeakyRelu" out_port_id="0"/>
+		<IR id="63" name="LeakyReLU_2012922246" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_37/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="242" name="detector/darknet-53/Conv_37/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_6/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="41" name="detector/darknet-53/Conv_6/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_35/Conv2D" out_port_id="0"/>
+		<IR id="227" name="detector/darknet-53/Conv_35/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_29/weights/read" out_port_id="0"/>
+		<IR id="187" name="detector/darknet-53/Conv_29/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1814718149_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_12/weights/read" out_port_id="0"/>
+		<IR id="399" name="detector/yolo-v3/Conv_12/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1828318285_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_14/Conv2D" out_port_id="0"/>
+		<IR id="91" name="detector/darknet-53/Conv_14/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_39/weights/read" out_port_id="0"/>
+		<IR id="252" name="detector/darknet-53/Conv_39/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1818718189_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_22/weights/read" out_port_id="0"/>
+		<IR id="462" name="detector/yolo-v3/Conv_22/weights/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_1/Conv2D" out_port_id="0"/>
+		<IR id="8" name="detector/darknet-53/Conv_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_26/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="171" name="detector/darknet-53/Conv_26/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_7/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="48" name="detector/darknet-53/Conv_7/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_21/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="459" name="detector/yolo-v3/Conv_21/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_19/LeakyRelu" out_port_id="0"/>
+		<IR id="449" name="LeakyReLU_2013122386" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_14/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="93" name="detector/darknet-53/Conv_14/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_27/weights/read" out_port_id="0"/>
+		<IR id="174" name="detector/darknet-53/Conv_27/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1813918141_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_29/LeakyRelu" out_port_id="0"/>
+		<IR id="192" name="LeakyReLU_2016222390" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_12" out_port_id="0"/>
+		<IR id="199" name="detector/darknet-53/add_12" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_21/Conv2D" out_port_id="0"/>
+		<IR id="457" name="detector/yolo-v3/Conv_21/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_13/LeakyRelu" out_port_id="0"/>
+		<IR id="88" name="LeakyReLU_2015722294" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_17/Conv2D" out_port_id="0"/>
+		<IR id="110" name="detector/darknet-53/Conv_17/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="4" name="detector/darknet-53/Conv/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_5" out_port_id="0"/>
+		<IR id="102" name="detector/darknet-53/add_5" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/ResizeNearestNeighbor/size" out_port_id="0"/>
+		<IR id="372" name="detector/yolo-v3/ResizeNearestNeighbor/Cast_126299_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="22" name="detector/darknet-53/Conv_3/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_18/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="441" name="detector/yolo-v3/Conv_18/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_17/weights/read" out_port_id="0"/>
+		<IR id="432" name="detector/yolo-v3/Conv_17/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1829918301_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_5/weights/read" out_port_id="0"/>
+		<IR id="468" name="detector/yolo-v3/Conv_5/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1826318265_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_46/weights/read" out_port_id="0"/>
+		<IR id="297" name="detector/darknet-53/Conv_46/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1821518217_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_42/LeakyRelu" out_port_id="0"/>
+		<IR id="276" name="LeakyReLU_2015222326" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_40/weights/read" out_port_id="0"/>
+		<IR id="258" name="detector/darknet-53/Conv_40/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1819118193_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_47/Conv2D" out_port_id="0"/>
+		<IR id="304" name="detector/darknet-53/Conv_47/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_16/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="429" name="detector/yolo-v3/Conv_16/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_33/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="216" name="detector/darknet-53/Conv_33/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_26/Conv2D" out_port_id="0"/>
+		<IR id="169" name="detector/darknet-53/Conv_26/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_8/LeakyRelu" out_port_id="0"/>
+		<IR id="380" name="LeakyReLU_2015822422" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_40/LeakyRelu" out_port_id="0"/>
+		<IR id="263" name="LeakyReLU_2016022194" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_19/weights/read" out_port_id="0"/>
+		<IR id="444" name="detector/yolo-v3/Conv_19/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1830718309_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_17/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="112" name="detector/darknet-53/Conv_17/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_34/LeakyRelu" out_port_id="0"/>
+		<IR id="224" name="LeakyReLU_2013422262" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_18/weights/read" out_port_id="0"/>
+		<IR id="438" name="detector/yolo-v3/Conv_18/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1830318305_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_16/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="106" name="detector/darknet-53/Conv_16/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_18" out_port_id="0"/>
+		<IR id="277" name="detector/darknet-53/add_18" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_2/weights/read" out_port_id="0"/>
+		<IR id="13" name="detector/darknet-53/Conv_2/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1803918041_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_25/Conv2D" out_port_id="0"/>
+		<IR id="162" name="detector/darknet-53/Conv_25/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_11" out_port_id="0"/>
+		<IR id="186" name="detector/darknet-53/add_11" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_21/weights/read" out_port_id="0"/>
+		<IR id="135" name="detector/darknet-53/Conv_21/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1811518117_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_7/Conv2D" out_port_id="0"/>
+		<IR id="46" name="detector/darknet-53/Conv_7/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_14/LeakyRelu" out_port_id="0"/>
+		<IR id="95" name="LeakyReLU_2014122270" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_29/Conv2D" out_port_id="0"/>
+		<IR id="188" name="detector/darknet-53/Conv_29/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_12/LeakyRelu" out_port_id="0"/>
+		<IR id="82" name="LeakyReLU_2012022266" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_43/Conv2D" out_port_id="0"/>
+		<IR id="279" name="detector/darknet-53/Conv_43/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="345" name="detector/yolo-v3/Conv_1/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv/weights/read" out_port_id="0"/>
+		<IR id="336" name="detector/yolo-v3/Conv/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1823918241_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_10/weights/read" out_port_id="0"/>
+		<IR id="387" name="detector/yolo-v3/Conv_10/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1827518277_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_9/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="384" name="detector/yolo-v3/Conv_9/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_37/Conv2D" out_port_id="0"/>
+		<IR id="240" name="detector/darknet-53/Conv_37/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_12/Conv2D" out_port_id="0"/>
+		<IR id="400" name="detector/yolo-v3/Conv_12/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_15/weights/read" out_port_id="0"/>
+		<IR id="96" name="detector/darknet-53/Conv_15/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1809118093_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_5/LeakyRelu" out_port_id="0"/>
+		<IR id="37" name="LeakyReLU_2018022430" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_46/Conv2D" out_port_id="0"/>
+		<IR id="298" name="detector/darknet-53/Conv_46/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_24/weights/read" out_port_id="0"/>
+		<IR id="155" name="detector/darknet-53/Conv_24/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1812718129_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_43/LeakyRelu" out_port_id="0"/>
+		<IR id="283" name="LeakyReLU_2016822414" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_7/weights/read" out_port_id="0"/>
+		<IR id="45" name="detector/darknet-53/Conv_7/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1805918061_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_31/LeakyRelu" out_port_id="0"/>
+		<IR id="205" name="LeakyReLU_2018522234" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_5/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="35" name="detector/darknet-53/Conv_5/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_42/weights/read" out_port_id="0"/>
+		<IR id="271" name="detector/darknet-53/Conv_42/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1819918201_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_38/Conv2D" out_port_id="0"/>
+		<IR id="246" name="detector/darknet-53/Conv_38/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_51/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="332" name="detector/darknet-53/Conv_51/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_6/weights/read" out_port_id="0"/>
+		<IR id="474" name="detector/yolo-v3/Conv_6/weights/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_46/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="300" name="detector/darknet-53/Conv_46/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_24/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="158" name="detector/darknet-53/Conv_24/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_2/weights/read" out_port_id="0"/>
+		<IR id="348" name="detector/yolo-v3/Conv_2/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1824718249_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_12/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="402" name="detector/yolo-v3/Conv_12/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_35/weights/read" out_port_id="0"/>
+		<IR id="226" name="detector/darknet-53/Conv_35/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1817118173_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_44/LeakyRelu" out_port_id="0"/>
+		<IR id="289" name="LeakyReLU_2016922398" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_1" out_port_id="0"/>
+		<IR id="44" name="detector/darknet-53/add_1" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv/Conv2D" out_port_id="0"/>
+		<IR id="2" name="detector/darknet-53/Conv/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_5/LeakyRelu" out_port_id="0"/>
+		<IR id="473" name="LeakyReLU_2011522290" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_5/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="471" name="detector/yolo-v3/Conv_5/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_14" out_port_id="0"/>
+		<IR id="225" name="detector/darknet-53/add_14" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_16/Conv2D" out_port_id="0"/>
+		<IR id="104" name="detector/darknet-53/Conv_16/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_49/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="319" name="detector/darknet-53/Conv_49/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_43/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="281" name="detector/darknet-53/Conv_43/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="351" name="detector/yolo-v3/Conv_2/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_11/Conv2D" out_port_id="0"/>
+		<IR id="71" name="detector/darknet-53/Conv_11/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_35/LeakyRelu" out_port_id="0"/>
+		<IR id="231" name="LeakyReLU_2014422346" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_51/LeakyRelu" out_port_id="0"/>
+		<IR id="334" name="LeakyReLU_2013822442" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_5/weights/read" out_port_id="0"/>
+		<IR id="32" name="detector/darknet-53/Conv_5/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1805118053_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_21/LeakyRelu" out_port_id="0"/>
+		<IR id="140" name="LeakyReLU_2016722254" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_21/Conv2D" out_port_id="0"/>
+		<IR id="136" name="detector/darknet-53/Conv_21/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_23/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="151" name="detector/darknet-53/Conv_23/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_13/Conv2D" out_port_id="0"/>
+		<IR id="84" name="detector/darknet-53/Conv_13/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_15/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="99" name="detector/darknet-53/Conv_15/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_3/weights/read" out_port_id="0"/>
+		<IR id="19" name="detector/darknet-53/Conv_3/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1804318045_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_38/weights/read" out_port_id="0"/>
+		<IR id="245" name="detector/darknet-53/Conv_38/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1818318185_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_12/Conv2D" out_port_id="0"/>
+		<IR id="78" name="detector/darknet-53/Conv_12/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_1/Conv2D" out_port_id="0"/>
+		<IR id="343" name="detector/yolo-v3/Conv_1/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_28/Conv2D" out_port_id="0"/>
+		<IR id="181" name="detector/darknet-53/Conv_28/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_6/Conv2D" out_port_id="0"/>
+		<IR id="39" name="detector/darknet-53/Conv_6/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_24/Conv2D" out_port_id="0"/>
+		<IR id="156" name="detector/darknet-53/Conv_24/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_19/Conv2D" out_port_id="0"/>
+		<IR id="123" name="detector/darknet-53/Conv_19/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_2/LeakyRelu" out_port_id="0"/>
+		<IR id="353" name="LeakyReLU_2017622426" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_16/weights/read" out_port_id="0"/>
+		<IR id="426" name="detector/yolo-v3/Conv_16/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1829518297_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_21" out_port_id="0"/>
+		<IR id="322" name="detector/darknet-53/add_21" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/upsampled" out_port_id="0"/>
+		<IR id="373" name="detector/yolo-v3/ResizeNearestNeighbor" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/ResizeNearestNeighbor" out_port_id="0"/>
+		<IR id="373" name="detector/yolo-v3/ResizeNearestNeighbor" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_50/Conv2D" out_port_id="0"/>
+		<IR id="324" name="detector/darknet-53/Conv_50/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_22/LeakyRelu" out_port_id="0"/>
+		<IR id="147" name="LeakyReLU_2013522258" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_49/weights/read" out_port_id="0"/>
+		<IR id="316" name="detector/darknet-53/Conv_49/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1822718229_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_1/LeakyRelu" out_port_id="0"/>
+		<IR id="12" name="LeakyReLU_2012322354" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_12/weights/read" out_port_id="0"/>
+		<IR id="77" name="detector/darknet-53/Conv_12/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1807918081_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_51/Conv2D" out_port_id="0"/>
+		<IR id="330" name="detector/darknet-53/Conv_51/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_49/LeakyRelu" out_port_id="0"/>
+		<IR id="321" name="LeakyReLU_2012422214" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_9/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="61" name="detector/darknet-53/Conv_9/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_19/Conv2D" out_port_id="0"/>
+		<IR id="445" name="detector/yolo-v3/Conv_19/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_10/Conv2D" out_port_id="0"/>
+		<IR id="388" name="detector/yolo-v3/Conv_10/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv/LeakyRelu" out_port_id="0"/>
+		<IR id="341" name="LeakyReLU_2014322378" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_11/Conv2D" out_port_id="0"/>
+		<IR id="394" name="detector/yolo-v3/Conv_11/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_48/LeakyRelu" out_port_id="0"/>
+		<IR id="315" name="LeakyReLU_2014222210" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_39/LeakyRelu" out_port_id="0"/>
+		<IR id="257" name="LeakyReLU_2015022302" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_13/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="408" name="detector/yolo-v3/Conv_13/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_18/Conv2D" out_port_id="0"/>
+		<IR id="439" name="detector/yolo-v3/Conv_18/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_22/Conv2D" out_port_id="0"/>
+		<IR id="463" name="detector/yolo-v3/Conv_22/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_1/weights/read" out_port_id="0"/>
+		<IR id="7" name="detector/darknet-53/Conv_1/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1803518037_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="339" name="detector/yolo-v3/Conv/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_25/weights/read" out_port_id="0"/>
+		<IR id="161" name="detector/darknet-53/Conv_25/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1813118133_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_41/Conv2D" out_port_id="0"/>
+		<IR id="266" name="detector/darknet-53/Conv_41/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_9/LeakyRelu" out_port_id="0"/>
+		<IR id="386" name="LeakyReLU_2014622162" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_36/LeakyRelu" out_port_id="0"/>
+		<IR id="237" name="LeakyReLU_2014822446" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_3/weights/read" out_port_id="0"/>
+		<IR id="354" name="detector/yolo-v3/Conv_3/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1825118253_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_27/LeakyRelu" out_port_id="0"/>
+		<IR id="179" name="LeakyReLU_2016322182" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_1/LeakyRelu" out_port_id="0"/>
+		<IR id="347" name="LeakyReLU_2014922434" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_18/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="119" name="detector/darknet-53/Conv_18/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_43/weights/read" out_port_id="0"/>
+		<IR id="278" name="detector/darknet-53/Conv_43/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1820318205_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv/Conv2D" out_port_id="0"/>
+		<IR id="337" name="detector/yolo-v3/Conv/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_45/weights/read" out_port_id="0"/>
+		<IR id="290" name="detector/darknet-53/Conv_45/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1821118213_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_11/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="396" name="detector/yolo-v3/Conv_11/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_9/weights/read" out_port_id="0"/>
+		<IR id="381" name="detector/yolo-v3/Conv_9/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1827118273_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_9/Conv2D" out_port_id="0"/>
+		<IR id="59" name="detector/darknet-53/Conv_9/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_3/Conv2D" out_port_id="0"/>
+		<IR id="355" name="detector/yolo-v3/Conv_3/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/upsampled_1" out_port_id="0"/>
+		<IR id="424" name="detector/yolo-v3/ResizeNearestNeighbor_1" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/ResizeNearestNeighbor_1" out_port_id="0"/>
+		<IR id="424" name="detector/yolo-v3/ResizeNearestNeighbor_1" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_17/LeakyRelu" out_port_id="0"/>
+		<IR id="114" name="LeakyReLU_2017922334" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_13/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="86" name="detector/darknet-53/Conv_13/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_1/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="10" name="detector/darknet-53/Conv_1/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_11/LeakyRelu" out_port_id="0"/>
+		<IR id="398" name="LeakyReLU_2011922362" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_19/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="447" name="detector/yolo-v3/Conv_19/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_36/weights/read" out_port_id="0"/>
+		<IR id="232" name="detector/darknet-53/Conv_36/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1817518177_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_10" out_port_id="0"/>
+		<IR id="167" name="detector/darknet-53/add_10" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_34/weights/read" out_port_id="0"/>
+		<IR id="219" name="detector/darknet-53/Conv_34/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1816718169_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_15/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="420" name="detector/yolo-v3/Conv_15/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_31/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="203" name="detector/darknet-53/Conv_31/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_17/LeakyRelu" out_port_id="0"/>
+		<IR id="437" name="LeakyReLU_2014522242" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_19/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="125" name="detector/darknet-53/Conv_19/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_3/LeakyRelu" out_port_id="0"/>
+		<IR id="24" name="LeakyReLU_2017422366" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_17" out_port_id="0"/>
+		<IR id="264" name="detector/darknet-53/add_17" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_41/weights/read" out_port_id="0"/>
+		<IR id="265" name="detector/darknet-53/Conv_41/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1819518197_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_26/weights/read" out_port_id="0"/>
+		<IR id="168" name="detector/darknet-53/Conv_26/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1813518137_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_3/LeakyRelu" out_port_id="0"/>
+		<IR id="359" name="LeakyReLU_2017122230" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_8/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="378" name="detector/yolo-v3/Conv_8/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_23/weights/read" out_port_id="0"/>
+		<IR id="148" name="detector/darknet-53/Conv_23/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1812318125_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_22/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="145" name="detector/darknet-53/Conv_22/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_36/Conv2D" out_port_id="0"/>
+		<IR id="233" name="detector/darknet-53/Conv_36/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_19/LeakyRelu" out_port_id="0"/>
+		<IR id="127" name="LeakyReLU_2012122338" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_41/LeakyRelu" out_port_id="0"/>
+		<IR id="270" name="LeakyReLU_2014022226" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_47/LeakyRelu" out_port_id="0"/>
+		<IR id="308" name="LeakyReLU_2015122238" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_11/LeakyRelu" out_port_id="0"/>
+		<IR id="75" name="LeakyReLU_2016622286" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_27/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="177" name="detector/darknet-53/Conv_27/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_8/Conv2D" out_port_id="0"/>
+		<IR id="52" name="detector/darknet-53/Conv_8/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_4/weights/read" out_port_id="0"/>
+		<IR id="360" name="detector/yolo-v3/Conv_4/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1825518257_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_19" out_port_id="0"/>
+		<IR id="296" name="detector/darknet-53/add_19" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_16/LeakyRelu" out_port_id="0"/>
+		<IR id="108" name="LeakyReLU_2012222382" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_20/weights/read" out_port_id="0"/>
+		<IR id="129" name="detector/darknet-53/Conv_20/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1811118113_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_6/Conv2D" out_port_id="0"/>
+		<IR id="475" name="detector/yolo-v3/Conv_6/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_34/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="222" name="detector/darknet-53/Conv_34/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_8/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="54" name="detector/darknet-53/Conv_8/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_44/weights/read" out_port_id="0"/>
+		<IR id="284" name="detector/darknet-53/Conv_44/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1820718209_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_32/Conv2D" out_port_id="0"/>
+		<IR id="207" name="detector/darknet-53/Conv_32/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/ResizeNearestNeighbor_1/size" out_port_id="0"/>
+		<IR id="423" name="detector/yolo-v3/ResizeNearestNeighbor_1/Cast_126351_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_50/LeakyRelu" out_port_id="0"/>
+		<IR id="328" name="LeakyReLU_2013622190" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_45/LeakyRelu" out_port_id="0"/>
+		<IR id="295" name="LeakyReLU_2016522306" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_15/Conv2D" out_port_id="0"/>
+		<IR id="418" name="detector/yolo-v3/Conv_15/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_37/weights/read" out_port_id="0"/>
+		<IR id="239" name="detector/darknet-53/Conv_37/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1817918181_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_10/LeakyRelu" out_port_id="0"/>
+		<IR id="69" name="LeakyReLU_2013222178" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_21/LeakyRelu" out_port_id="0"/>
+		<IR id="461" name="LeakyReLU_2015522250" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_15" out_port_id="0"/>
+		<IR id="238" name="detector/darknet-53/add_15" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_31/Conv2D" out_port_id="0"/>
+		<IR id="201" name="detector/darknet-53/Conv_31/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_20" out_port_id="0"/>
+		<IR id="309" name="detector/darknet-53/add_20" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_30/Conv2D" out_port_id="0"/>
+		<IR id="194" name="detector/darknet-53/Conv_30/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_28/LeakyRelu" out_port_id="0"/>
+		<IR id="185" name="LeakyReLU_2016122318" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_15/LeakyRelu" out_port_id="0"/>
+		<IR id="422" name="LeakyReLU_2013922330" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_4/LeakyRelu" out_port_id="0"/>
+		<IR id="31" name="LeakyReLU_2018222370" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_12/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="80" name="detector/darknet-53/Conv_12/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_18/LeakyRelu" out_port_id="0"/>
+		<IR id="443" name="LeakyReLU_2017522342" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_25/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="164" name="detector/darknet-53/Conv_25/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_40/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="261" name="detector/darknet-53/Conv_40/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_48/weights/read" out_port_id="0"/>
+		<IR id="310" name="detector/darknet-53/Conv_48/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1822318225_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_47/weights/read" out_port_id="0"/>
+		<IR id="303" name="detector/darknet-53/Conv_47/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1821918221_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_42/Conv2D" out_port_id="0"/>
+		<IR id="272" name="detector/darknet-53/Conv_42/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_5/Conv2D" out_port_id="0"/>
+		<IR id="469" name="detector/yolo-v3/Conv_5/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_30/weights/read" out_port_id="0"/>
+		<IR id="193" name="detector/darknet-53/Conv_30/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1815118153_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_26/LeakyRelu" out_port_id="0"/>
+		<IR id="173" name="LeakyReLU_2018122358" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_19/weights/read" out_port_id="0"/>
+		<IR id="122" name="detector/darknet-53/Conv_19/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1810718109_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_6/weights/read" out_port_id="0"/>
+		<IR id="38" name="detector/darknet-53/Conv_6/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1805518057_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_21/weights/read" out_port_id="0"/>
+		<IR id="456" name="detector/yolo-v3/Conv_21/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1831518317_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_31/weights/read" out_port_id="0"/>
+		<IR id="200" name="detector/darknet-53/Conv_31/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1815518157_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_49/Conv2D" out_port_id="0"/>
+		<IR id="317" name="detector/darknet-53/Conv_49/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_8/weights/read" out_port_id="0"/>
+		<IR id="375" name="detector/yolo-v3/Conv_8/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1826718269_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_46/LeakyRelu" out_port_id="0"/>
+		<IR id="302" name="LeakyReLU_2018322350" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_2/LeakyRelu" out_port_id="0"/>
+		<IR id="18" name="LeakyReLU_2017722406" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_13/Conv2D" out_port_id="0"/>
+		<IR id="406" name="detector/yolo-v3/Conv_13/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_50/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="326" name="detector/darknet-53/Conv_50/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_28/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="183" name="detector/darknet-53/Conv_28/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/concat_3" out_port_id="0"/>
+		<IR id="374" name="detector/yolo-v3/concat_3" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_9" out_port_id="0"/>
+		<IR id="154" name="detector/darknet-53/add_9" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_30/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="196" name="detector/darknet-53/Conv_30/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_10/Conv2D" out_port_id="0"/>
+		<IR id="65" name="detector/darknet-53/Conv_10/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_3/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="357" name="detector/yolo-v3/Conv_3/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_20/LeakyRelu" out_port_id="0"/>
+		<IR id="455" name="LeakyReLU_2015622202" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_14/weights/read" out_port_id="0"/>
+		<IR id="411" name="detector/yolo-v3/Conv_14/weights/read/Output_0/Data__const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_28/weights/read" out_port_id="0"/>
+		<IR id="180" name="detector/darknet-53/Conv_28/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1814318145_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_14/Conv2D" out_port_id="0"/>
+		<IR id="412" name="detector/yolo-v3/Conv_14/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_4" out_port_id="0"/>
+		<IR id="89" name="detector/darknet-53/add_4" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_8/weights/read" out_port_id="0"/>
+		<IR id="51" name="detector/darknet-53/Conv_8/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1806318065_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_7" out_port_id="0"/>
+		<IR id="128" name="detector/darknet-53/add_7" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_4/Conv2D" out_port_id="0"/>
+		<IR id="361" name="detector/yolo-v3/Conv_4/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_21/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="138" name="detector/darknet-53/Conv_21/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_23/LeakyRelu" out_port_id="0"/>
+		<IR id="153" name="LeakyReLU_2014722310" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_17/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="435" name="detector/yolo-v3/Conv_17/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_22/Conv2D" out_port_id="0"/>
+		<IR id="143" name="detector/darknet-53/Conv_22/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_4/LeakyRelu" out_port_id="0"/>
+		<IR id="365" name="LeakyReLU_2015322222" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_36/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="235" name="detector/darknet-53/Conv_36/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_20/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="132" name="detector/darknet-53/Conv_20/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_7/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="369" name="detector/yolo-v3/Conv_7/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_32/LeakyRelu" out_port_id="0"/>
+		<IR id="211" name="LeakyReLU_2011822166" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_44/Conv2D" out_port_id="0"/>
+		<IR id="285" name="detector/darknet-53/Conv_44/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_33/Conv2D" out_port_id="0"/>
+		<IR id="214" name="detector/darknet-53/Conv_33/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_35/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="229" name="detector/darknet-53/Conv_35/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_10/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="390" name="detector/yolo-v3/Conv_10/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_9/Conv2D" out_port_id="0"/>
+		<IR id="382" name="detector/yolo-v3/Conv_9/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_20/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="453" name="detector/yolo-v3/Conv_20/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_8" out_port_id="0"/>
+		<IR id="141" name="detector/darknet-53/add_8" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_29/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="190" name="detector/darknet-53/Conv_29/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_33/weights/read" out_port_id="0"/>
+		<IR id="213" name="detector/darknet-53/Conv_33/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1816318165_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_39/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="255" name="detector/darknet-53/Conv_39/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_23/Conv2D" out_port_id="0"/>
+		<IR id="149" name="detector/darknet-53/Conv_23/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_2/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="16" name="detector/darknet-53/Conv_2/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/truediv" out_port_id="0"/>
+		<IR id="0" name="inputs" out_port_id="0"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_42/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="274" name="detector/darknet-53/Conv_42/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_41/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="268" name="detector/darknet-53/Conv_41/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_2/Conv2D" out_port_id="0"/>
+		<IR id="14" name="detector/darknet-53/Conv_2/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_27/Conv2D" out_port_id="0"/>
+		<IR id="175" name="detector/darknet-53/Conv_27/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_40/Conv2D" out_port_id="0"/>
+		<IR id="259" name="detector/darknet-53/Conv_40/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_32/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="209" name="detector/darknet-53/Conv_32/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_38/LeakyRelu" out_port_id="0"/>
+		<IR id="250" name="LeakyReLU_2016422438" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_7/LeakyRelu" out_port_id="0"/>
+		<IR id="371" name="LeakyReLU_2012722218" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_13/weights/read" out_port_id="0"/>
+		<IR id="83" name="detector/darknet-53/Conv_13/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1808318085_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_6/LeakyRelu" out_port_id="0"/>
+		<IR id="43" name="LeakyReLU_2017222298" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_20/Conv2D" out_port_id="0"/>
+		<IR id="451" name="detector/yolo-v3/Conv_20/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_11/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="73" name="detector/darknet-53/Conv_11/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_18/weights/read" out_port_id="0"/>
+		<IR id="116" name="detector/darknet-53/Conv_18/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1810318105_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_18/LeakyRelu" out_port_id="0"/>
+		<IR id="121" name="LeakyReLU_2015922206" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_11/weights/read" out_port_id="0"/>
+		<IR id="70" name="detector/darknet-53/Conv_11/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1807518077_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/yolo-v3/Conv_16/Conv2D" out_port_id="0"/>
+		<IR id="427" name="detector/yolo-v3/Conv_16/Conv2D" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_16/weights/read" out_port_id="0"/>
+		<IR id="103" name="detector/darknet-53/Conv_16/BatchNorm/FusedBatchNorm/mean/Fused_Mul_1809518097_const" out_port_id="1"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/Conv_38/BatchNorm/FusedBatchNorm" out_port_id="0"/>
+		<IR id="248" name="detector/darknet-53/Conv_38/BatchNorm/FusedBatchNorm/variance/Fused_Add_" out_port_id="2"/>
+	</map>
+	<map>
+		<framework name="detector/darknet-53/add_3" out_port_id="0"/>
+		<IR id="76" name="detector/darknet-53/add_3" out_port_id="2"/>
+	</map>
+</mapping>

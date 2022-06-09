@@ -1,0 +1,5 @@
+py-cpuinfo
+numpy
+progress
+opencv-python
+openvino
